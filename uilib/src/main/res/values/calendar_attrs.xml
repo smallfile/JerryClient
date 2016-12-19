@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <declare-styleable name="CalendarPickerView">
+        <attr name="android:background" />
+        <attr name="calendarDividerColor" format="color" />
+        <attr name="calendarDayBackground" format="reference" />
+        <attr name="calendarDayTextColor" format="color" />
+        <attr name="calendarTitleTextColor" format="color" />
+        <attr name="calendarHeaderTextColor" format="color" />
+    </declare-styleable>
+    <declare-styleable name="CalendarCell">
+        <attr name="calendarSelectable" format="boolean" />
+        <attr name="calendarCurrentMonth" format="boolean" />
+        <attr name="calendarToday" format="boolean" />
+        <attr name="calendarRangeFirst" format="boolean" />
+        <attr name="calendarRangeMiddle" format="boolean" />
+        <attr name="calendarRangeLast" format="boolean" />
+        <attr name="calendarHighlighted" format="boolean" />
+    </declare-styleable>
+
+
+
+</resources>

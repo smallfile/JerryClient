@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="50dp">
+
+    <Button
+        android:id="@+id/nav_left_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="10dp"
+        android:textSize="20sp" 
+        android:minHeight="40dp"
+        android:minWidth="40dp" />
+
+    <TextView
+        android:id="@+id/nav_title"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:singleLine="true"
+        android:textSize="20sp" />
+    
+    <LinearLayout
+        android:id="@+id/nav_right_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal" >
+
+        <Button
+            android:id="@+id/nav_right_btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:minWidth="40dp"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/nav_right_btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:minHeight="40dp"
+            android:minWidth="40dp"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/nav_right_btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minHeight="40dp"
+            android:minWidth="40dp"
+            android:layout_marginRight="10dp"
+            android:textSize="20sp" />
+
+    </LinearLayout>
+    
+    
+</RelativeLayout>

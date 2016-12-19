@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_alignParentBottom="true"
+    android:orientation="vertical" >
+
+    <com.jerry.uilib.widget.NavigationBar
+        xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nav_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/base_blue"
+        navigationBar:leftBtnBackground="@android:color/transparent"
+        navigationBar:leftBtnColor="@android:color/white"
+        navigationBar:leftBtnName="取消"
+        navigationBar:leftBtnVisibility="visible"
+        navigationBar:rightBtn1Visibility="gone"
+        navigationBar:rightBtn2Visibility="gone"
+        navigationBar:rightBtn3Background="@android:color/transparent"
+        navigationBar:rightBtn3Color="@android:color/white"
+        navigationBar:rightBtn3Name="确定"
+        navigationBar:rightBtn3Visibility="visible"
+        navigationBar:titleColor="@android:color/white"
+        navigationBar:titleName="日期" />
+
+    <com.jerry.uilib.widget.datetime.DatePicker
+        android:id="@+id/datePicker"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/base_white"
+        android:paddingLeft="35dp"
+        android:paddingRight="35dp" />
+
+</LinearLayout>

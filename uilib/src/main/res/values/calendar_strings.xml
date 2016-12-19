@@ -1,0 +1,8 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <string name="calendar_invalid_date">Date must be between %1$s and %2$s.</string>
+    <string name="calendar_day_name_format">EEE</string>
+    <string name="calendar_month_name_format">MM月 yyyy年</string>
+    <string name="calendar_text_selected">忙</string>
+     
+</resources>

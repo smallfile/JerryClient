@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- nav bar begin -->
+    <color name="navigation_bar_title">#ffffff</color>
+    <color name="navigation_bar_background">#60b4ea</color>
+    <!-- nav bar end -->
+    
+</resources>

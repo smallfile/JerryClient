@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.jerry.uilib.widget.NavigationBar
+        xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nav_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/navigation_bar_background"
+        navigationBar:leftBtnVisibility="visible"
+        navigationBar:leftBtnBackground="@drawable/nav_bar_left_button"
+        navigationBar:rightBtn1Visibility="invisible"
+        navigationBar:rightBtn1Background="@drawable/nav_bar_right_button"
+        navigationBar:rightBtn2Visibility="visible"
+        navigationBar:rightBtn2Background="@drawable/nav_bar_right_button"
+        navigationBar:rightBtn3Visibility="gone"
+        navigationBar:titleName="silding menu"
+        navigationBar:titleColor="@color/base_gray"/>
+
+    <FrameLayout
+    		android:id="@+id/content_frame"
+    		android:layout_width="match_parent"
+    		android:layout_height="match_parent" />
+
+</LinearLayout>

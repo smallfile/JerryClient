@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="navigation_bar">
+        <attr name="leftBtnVisibility">
+            <flag name="gone" value="0" />
+            <flag name="visible" value="1" />
+            <flag name="invisible" value="2" />
+        </attr>
+        <attr name="leftBtnBackground" format="reference" />
+        <attr name="leftBtnName" format="string" />
+        <attr name="leftBtnColor" format="reference" />
+        <attr name="rightBtn1Visibility">
+            <flag name="gone" value="0" />
+            <flag name="visible" value="1" />
+            <flag name="invisible" value="2" />
+        </attr>
+        <attr name="rightBtn1Background" format="reference" />
+        <attr name="rightBtn1Name" format="string" />
+        <attr name="rightBtn1Color" format="reference" />
+        <attr name="rightBtn2Visibility">
+            <flag name="gone" value="0" />
+            <flag name="visible" value="1" />
+            <flag name="invisible" value="2" />
+        </attr>
+        <attr name="rightBtn2Background" format="reference" />
+        <attr name="rightBtn2Name" format="string" />
+        <attr name="rightBtn2Color" format="reference" />
+        <attr name="rightBtn3Visibility">
+            <flag name="gone" value="0" />
+            <flag name="visible" value="1" />
+            <flag name="invisible" value="2" />
+        </attr>
+        <attr name="rightBtn3Background" format="reference" />
+        <attr name="rightBtn3Name" format="string" />
+        <attr name="rightBtn3Color" format="reference" />
+        <attr name="titleName" format="string" />
+        <attr name="titleColor" format="reference" />
+        <attr name="titleSize" format="string" />
+    </declare-styleable>
+    
+</resources>

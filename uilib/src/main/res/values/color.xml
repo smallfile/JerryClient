@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <!-- 项目中用到的基本色值 -->
+    <color name="base_green">#3cf798</color>
+    <color name="base_orange">#ff8264</color>
+    <color name="base_gray">#a3a3a3</color>
+    <color name="base_blue">#60c9ff</color>
+    <color name="base_white">#ffffff</color>
+    <color name="base_black">#303030</color>
+    <color name="base_transparent">#000000</color>
+    <color name="base_pink">#FFFF99</color>
+    <color name="base_red">#900</color>
+    
+</resources>

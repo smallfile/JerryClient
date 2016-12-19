@@ -1,0 +1,18 @@
+<com.jerry.uilib.widget.calendar2.CalendarPickerView
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/calendar_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingBottom="16dp"
+        android:scrollbarStyle="outsideOverlay"
+        android:clipToPadding="false"
+        android:background="@color/calendar_custom_background"
+        app:calendarDayBackground="@drawable/calendar_bg_selector_custom"
+        app:calendarDayTextColor="@color/calendar_text_selector_custom"
+        app:calendarDividerColor="@color/android:transparent"
+        app:calendarTitleTextColor="@color/calendar_text_selector_custom"
+        app:calendarHeaderTextColor="@color/calendar_custom_header_text"
+        />

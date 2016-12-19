@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright 2014 Square, Inc. -->
+
+<selector xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item android:state_selected="true" android:color="@color/calendar_custom_text_selected"/>
+    <item android:state_pressed="true" android:color="@color/calendar_custom_text_selected"/>
+    <item app:calendarCurrentMonth="false" android:color="@color/calendar_custom_text_inactive"/>
+    <item app:calendarToday="true" android:color="@color/calendar_custom_text_selected"/>
+    <item app:calendarSelectable="false" android:color="@color/calendar_custom_text_inactive" />
+    <item android:color="@color/calendar_custom_text_default"/>
+</selector>

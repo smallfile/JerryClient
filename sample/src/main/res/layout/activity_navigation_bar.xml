@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:orientation="vertical" >
+
+    <com.jerry.uilib.widget.NavigationBar
+        xmlns:navigationBar="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/nav_bar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/navigation_bar_background"
+        navigationBar:leftBtnVisibility="visible"
+        navigationBar:leftBtnBackground="@drawable/nav_bar_left_button"
+        navigationBar:rightBtn1Visibility="invisible"
+        navigationBar:rightBtn1Background="@drawable/nav_bar_right_button"
+        navigationBar:rightBtn2Visibility="visible"
+        navigationBar:rightBtn2Background="@drawable/nav_bar_right_button"
+        navigationBar:rightBtn3Visibility="visible"
+        navigationBar:rightBtn3Name="否"
+        navigationBar:rightBtn3Background="@android:color/transparent"
+        navigationBar:rightBtn3Color="@android:color/white"
+        navigationBar:titleName="导航条"
+        navigationBar:titleColor="@color/base_gray"/>
+
+    <TextView
+        android:id="@+id/nav_bar_activity_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        />
+
+</LinearLayout>

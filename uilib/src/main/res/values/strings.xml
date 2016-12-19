@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">UILib</string>
+
+    <string name="common_yes">是</string>
+    <string name="common_no">否</string>
+    <string name="common_ok">确定</string>
+    <string name="common_cancel">取消</string>
+
+
+
+</resources>

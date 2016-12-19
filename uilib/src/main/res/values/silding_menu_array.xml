@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="color_names">
+        <item>Red</item>
+        <item>Green</item>
+        <item>Blue</item>
+        <item>White</item>
+        <item>Black</item>
+    </string-array>
+
+    <string-array name="birds">
+        <item>Eagle</item>
+        <item>Flamingo</item>
+        <item>Heron</item>
+        <item>Ostrich</item>
+        <item>Peacock</item>
+        <item>Penguin</item>
+        <item>Toucan</item>
+        <item>Turkey</item>
+        <item>Vulture</item>
+    </string-array>
+
+    <string-array name="birds_img">
+        <item>@mipmap/sliding_menu_eagle</item>
+        <item>@mipmap/sliding_menu_flamingo</item>
+        <item>@mipmap/sliding_menu_heron</item>
+        <item>@mipmap/sliding_menu_ostrich</item>
+        <item>@mipmap/sliding_menu_peacock</item>
+        <item>@mipmap/sliding_menu_penguin</item>
+        <item>@mipmap/sliding_menu_toucan</item>
+        <item>@mipmap/sliding_menu_turkey</item>
+        <item>@mipmap/sliding_menu_vulture</item>
+    </string-array>
+    
+</resources>

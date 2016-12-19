@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+
+    <color name="post_code_border">#ffffff</color>
+    <color name="post_code_content">#a3a3a3</color>
+    
+</resources>
