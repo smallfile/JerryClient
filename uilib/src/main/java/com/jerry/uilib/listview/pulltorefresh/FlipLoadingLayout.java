@@ -116,7 +116,7 @@ public class FlipLoadingLayout extends LoadingLayout {
 
 	@Override
 	protected int getDefaultDrawableResId() {
-		return R.mipmap.ptr_flip;
+		return R.drawable.ptr_flip;
 	}
 
 	private float getDrawableRotationAngle() {

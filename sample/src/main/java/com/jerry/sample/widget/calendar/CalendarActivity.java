@@ -147,7 +147,7 @@ public class CalendarActivity extends Activity implements OnGestureListener {
 	
 	private void addTopTextViewConfig() {
 		topText = (BorderText) findViewById(R.id.toptext);
-		topText.setBackgroundResource(R.mipmap.calendar_top_day);
+		topText.setBackgroundResource(R.drawable.calendar_top_day);
 		topText.setTextColor(Color.BLACK);
 		topText.setTypeface(Typeface.DEFAULT_BOLD);
 	}
@@ -215,7 +215,7 @@ public class CalendarActivity extends Activity implements OnGestureListener {
 		gridView.setSelector(new ColorDrawable(Color.TRANSPARENT)); // 去除gridView边框
 		gridView.setVerticalSpacing(1);
 		gridView.setHorizontalSpacing(1);
-        gridView.setBackgroundResource(R.mipmap.calendar_gridview_bk);
+        gridView.setBackgroundResource(R.drawable.calendar_gridview_bk);
 	}
 	
 	private void showSchedulingDialog(final String date){

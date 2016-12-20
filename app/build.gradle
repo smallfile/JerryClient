@@ -4,7 +4,7 @@ android {
     compileSdkVersion 24
     buildToolsVersion "23.0.3"
     defaultConfig {
-        applicationId "com.jerry.lib"
+        applicationId "com.jerry.client"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1

@@ -16,7 +16,7 @@ public class RoundedImageActivity extends Activity {
 		setContentView(R.layout.activity_rounded_image);
 
 		mRoundedImageView = (RoundedImageView)findViewById(R.id.rounded_image);
-		mRoundedImageView.setBackgroundResource(R.mipmap.sliding_menu_heron);
+		mRoundedImageView.setBackgroundResource(R.drawable.sliding_menu_heron);
 
 
 	}

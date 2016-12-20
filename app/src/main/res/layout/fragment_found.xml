@@ -17,7 +17,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_vertical"
             android:layout_marginLeft="14dp"
-            android:drawableLeft="@mipmap/me_about"
+            android:drawableLeft="@drawable/me_about"
             android:drawablePadding="14sp"
             android:text="关于"
             android:textColor="#353535"

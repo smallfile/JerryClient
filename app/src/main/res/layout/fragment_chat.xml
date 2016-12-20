@@ -6,7 +6,27 @@
     android:orientation="vertical">
 
 
+    <LinearLayout
+        android:id="@+id/m_service"
+        android:layout_width="match_parent"
+        android:layout_height="45.5dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/list_item_bg"
+        android:clickable="true">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="14dp"
+            android:drawableLeft="@drawable/me_service"
+            android:drawablePadding="14sp"
+            android:text="意见反馈"
+            android:textColor="#353535"
+            android:textSize="16sp" />
+
+
+    </LinearLayout>
 
 
 </LinearLayout>

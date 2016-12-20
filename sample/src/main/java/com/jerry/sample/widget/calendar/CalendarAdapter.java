@@ -119,7 +119,7 @@ public class CalendarAdapter extends BaseAdapter {
 		// 设置周
 		textView.setTextColor(Color.BLACK);
 		Drawable drawable = mContext.getResources().getDrawable(
-				R.mipmap.calendar_week_top);
+				R.drawable.calendar_week_top);
 		textView.setBackgroundDrawable(drawable);
 	}
 	
@@ -127,7 +127,7 @@ public class CalendarAdapter extends BaseAdapter {
 		// 当前月信息显示
 		textView.setTextColor(Color.BLACK);// 本月字体设黑
 		Drawable drawable = mContext.getResources()
-				.getDrawable(R.mipmap.calendar_item);
+				.getDrawable(R.drawable.calendar_item);
 		textView.setBackgroundDrawable(drawable);
 		textView.setBackgroundColor(Color.WHITE);
 	}
@@ -135,7 +135,7 @@ public class CalendarAdapter extends BaseAdapter {
 	private void setTodayStyle(TextView textView) {
 		// 设置当天的背景
 		Drawable drawable = mContext.getResources().getDrawable(
-				R.mipmap.calendar_current_day_bg);
+				R.drawable.calendar_current_day_bg);
 		textView.setBackgroundDrawable(drawable);
 		textView.setTextColor(Color.WHITE);
 	}
@@ -147,9 +147,9 @@ public class CalendarAdapter extends BaseAdapter {
 					// 设置日程标记背景
 					String status = schedulingMap.get(position);
 					if (CalendarInfoBean.SCHEDULING_PROGRAM_BUSY.equalsIgnoreCase(status)) {
-						textView.setBackgroundResource(R.mipmap.calendar_mark);
+						textView.setBackgroundResource(R.drawable.calendar_mark);
 					} else if (CalendarInfoBean.SCHEDULING_PROGRAM_ORDER.equalsIgnoreCase(status)) {
-						textView.setBackgroundResource(R.mipmap.calendar_week_top);
+						textView.setBackgroundResource(R.drawable.calendar_week_top);
 					}
 				}
 			}

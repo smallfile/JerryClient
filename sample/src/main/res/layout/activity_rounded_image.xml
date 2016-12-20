@@ -11,7 +11,7 @@
         android:layout_height="250dp"
         android:layout_marginLeft="5dp"
         android:layout_marginRight="5dp"
-        android:src="@mipmap/test_image"
+        android:src="@drawable/test_image"
         riv:borderThickness="20dp"
         riv:borderColor="@color/base_red"/>
 

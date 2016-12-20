@@ -22,15 +22,15 @@
     </string-array>
 
     <string-array name="birds_img">
-        <item>@mipmap/sliding_menu_eagle</item>
-        <item>@mipmap/sliding_menu_flamingo</item>
-        <item>@mipmap/sliding_menu_heron</item>
-        <item>@mipmap/sliding_menu_ostrich</item>
-        <item>@mipmap/sliding_menu_peacock</item>
-        <item>@mipmap/sliding_menu_penguin</item>
-        <item>@mipmap/sliding_menu_toucan</item>
-        <item>@mipmap/sliding_menu_turkey</item>
-        <item>@mipmap/sliding_menu_vulture</item>
+        <item>@drawable/sliding_menu_eagle</item>
+        <item>@drawable/sliding_menu_flamingo</item>
+        <item>@drawable/sliding_menu_heron</item>
+        <item>@drawable/sliding_menu_ostrich</item>
+        <item>@drawable/sliding_menu_peacock</item>
+        <item>@drawable/sliding_menu_penguin</item>
+        <item>@drawable/sliding_menu_toucan</item>
+        <item>@drawable/sliding_menu_turkey</item>
+        <item>@drawable/sliding_menu_vulture</item>
     </string-array>
     
 </resources>

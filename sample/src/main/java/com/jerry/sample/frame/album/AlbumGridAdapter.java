@@ -85,7 +85,7 @@ public class AlbumGridAdapter extends BaseAdapter {
 	}
 	
 	private void selectedImage(Holder holder) {
-		holder.selected.setBackgroundResource(R.mipmap.album_grid_selected);
+		holder.selected.setBackgroundResource(R.drawable.album_grid_selected);
 		holder.text.setBackgroundResource(R.drawable.album_grid_selected_background);
 	}
 	

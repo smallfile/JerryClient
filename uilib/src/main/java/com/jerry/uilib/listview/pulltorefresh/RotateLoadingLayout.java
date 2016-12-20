@@ -104,7 +104,7 @@ public class RotateLoadingLayout extends LoadingLayout {
 
 	@Override
 	protected int getDefaultDrawableResId() {
-		return R.mipmap.ptr_rotate;
+		return R.drawable.ptr_rotate;
 	}
 
 }

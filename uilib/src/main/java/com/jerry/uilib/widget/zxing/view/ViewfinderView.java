@@ -50,7 +50,7 @@ public final class ViewfinderView extends View {
 		int left = getResources().getColor(R.color.lightgreen);
 		int center = getResources().getColor(R.color.green);
 		int right = getResources().getColor(R.color.lightgreen);
-		lineDrawable = getResources().getDrawable(R.mipmap.zxing_line);
+		lineDrawable = getResources().getDrawable(R.drawable.zxing_line);
 		mDrawable = new GradientDrawable(
 				GradientDrawable.Orientation.LEFT_RIGHT, new int[] { left,
 						left, center, right, right });

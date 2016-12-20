@@ -32,7 +32,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="14dp"
             android:layout_marginTop="80dp"
-            android:src="@mipmap/me_about" />
+            android:src="@drawable/me_about" />
 
         <TextView
             android:layout_width="wrap_content"

@@ -52,7 +52,7 @@ public class PullToRefreshViewPagerActivity extends Activity implements PullToRe
 
 	static class SamplePagerAdapter extends PagerAdapter {
 
-		private static int[] sDrawables = { R.mipmap.ptr_wallpaper, R.mipmap.ptr_wallpaper,R.mipmap.ptr_wallpaper,R.mipmap.ptr_wallpaper,R.mipmap.ptr_wallpaper,R.mipmap.ptr_wallpaper};
+		private static int[] sDrawables = { R.drawable.ptr_wallpaper, R.drawable.ptr_wallpaper,R.drawable.ptr_wallpaper,R.drawable.ptr_wallpaper,R.drawable.ptr_wallpaper,R.drawable.ptr_wallpaper};
 
 		@Override
 		public int getCount() {

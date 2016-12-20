@@ -68,7 +68,7 @@ public class SlidingMenuQQActivity extends SlidingFragmentActivity {
         sm.setBehindScrollScale(0.25f);
         sm.setFadeDegree(0.25f);
 
-        sm.setBackgroundImage(R.mipmap.background_transparent);
+        sm.setBackgroundImage(R.drawable.background_transparent);
         sm.setBehindCanvasTransformer(new SlidingMenu.CanvasTransformer() {
             @Override
             public void transformCanvas(Canvas canvas, float percentOpen) {
