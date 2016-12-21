@@ -10,6 +10,7 @@ import com.jerry.sample.ListInfoAdapter;
 import com.jerry.sample.ListInfoBean;
 import com.jerry.sample.R;
 import com.jerry.sample.listview.pulltorefresh.PullToRefreshActivity;
+import com.jerry.sample.listview.recyclerview.RecyclerViewActivity;
 import com.jerry.sample.utils.MyActivityManager;
 
 import java.util.ArrayList;
@@ -46,6 +47,8 @@ public class ListViewActivity extends Activity {
                 String jumpActivity = infoBean.getActivity();
                 if("PullToRefresh".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, PullToRefreshActivity.class, null);
+                } else if("RecyclerView".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, RecyclerViewActivity.class, null);
                 }
             }
         });
@@ -58,7 +61,10 @@ public class ListViewActivity extends Activity {
         pulltorefresh.setActivity("PullToRefresh");
         mListData.add(pulltorefresh);
 
-
+        ListInfoBean recyclerview = new ListInfoBean();
+        recyclerview.setTitle("Recycler View");
+        recyclerview.setActivity("RecyclerView");
+        mListData.add(recyclerview);
 
 
 

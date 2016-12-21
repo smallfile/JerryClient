@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_height="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:background="?attr/colorPrimary" >
+    </android.support.v7.widget.Toolbar>
+
+    <Button
+        android:id="@+id/pull_and_push"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Pull and push"
+        android:onClick="pull_push"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="load more Image"
+        android:onClick="load_image"
+        />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="swipe_menu"
+        android:onClick="swipe_menu"
+        />
+
+
+
+</LinearLayout>
