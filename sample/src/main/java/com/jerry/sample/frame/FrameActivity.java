@@ -53,6 +53,8 @@ public class FrameActivity extends Activity {
                     MyActivityManager.getInstance().startActivity(mContext, TabFragmentActivity.class, null);
                 } else  if("album".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, AlbumBucketActivity.class, null);
+                } else  if("crash".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, CrashActivity.class, null);
                 }
             }
         });
@@ -75,6 +77,10 @@ public class FrameActivity extends Activity {
         album.setActivity("album");
         mListData.add(album);
 
+        ListInfoBean crash = new ListInfoBean();
+        crash.setTitle("Crash异常");
+        crash.setActivity("crash");
+        mListData.add(crash);
 
     }
 

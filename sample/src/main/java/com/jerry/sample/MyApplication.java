@@ -7,10 +7,8 @@ import org.xutils.BuildConfig;
 import org.xutils.x;
 import com.android.volley.cache.DiskLruBasedCache;
 import com.android.volley.cache.plus.SimpleImageLoader;
+import com.jerry.sample.utils.CrashHandler;
 
-/**
- * Created by wyouflf on 15/10/28.
- */
 public class MyApplication extends Application {
 
     private SimpleImageLoader mImageLoader;
@@ -31,6 +29,11 @@ public class MyApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+
+        //初例化未捕获异常监听器
+        CrashHandler.getInstance().init(getApplicationContext());
+
+        //XUtils初例化
         x.Ext.init(this);
         x.Ext.setDebug(BuildConfig.DEBUG); // 开启debug会影响性能
 
