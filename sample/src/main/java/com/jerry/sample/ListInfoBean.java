@@ -7,7 +7,7 @@ public class ListInfoBean {
 
     private String title;
     private String subTitle;
-    private String activity;
+    private String operate;
 
     public String getTitle() {
         return title;
@@ -23,10 +23,10 @@ public class ListInfoBean {
         this.subTitle = subTitle;
     }
 
-    public String getActivity() {
-        return activity;
+    public String getOperate() {
+        return operate;
     }
-    public void setActivity(String activity) {
-        this.activity = activity;
+    public void setOperate(String operate) {
+        this.operate = operate;
     }
 }

@@ -44,7 +44,7 @@ public class ListViewActivity extends Activity {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long rowId) {
                 ListInfoBean infoBean = mListData.get(position);
-                String jumpActivity = infoBean.getActivity();
+                String jumpActivity = infoBean.getOperate();
                 if("PullToRefresh".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, PullToRefreshActivity.class, null);
                 } else if("RecyclerView".equals(jumpActivity)){
@@ -58,12 +58,12 @@ public class ListViewActivity extends Activity {
 
         ListInfoBean pulltorefresh = new ListInfoBean();
         pulltorefresh.setTitle("Pull To Refresh");
-        pulltorefresh.setActivity("PullToRefresh");
+        pulltorefresh.setOperate("PullToRefresh");
         mListData.add(pulltorefresh);
 
         ListInfoBean recyclerview = new ListInfoBean();
         recyclerview.setTitle("Recycler View");
-        recyclerview.setActivity("RecyclerView");
+        recyclerview.setOperate("RecyclerView");
         mListData.add(recyclerview);
 
 

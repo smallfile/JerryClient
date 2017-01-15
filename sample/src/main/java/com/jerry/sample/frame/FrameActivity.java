@@ -11,6 +11,7 @@ import com.jerry.sample.ListInfoAdapter;
 import com.jerry.sample.ListInfoBean;
 import com.jerry.sample.R;
 import com.jerry.sample.frame.album.AlbumBucketActivity;
+import com.jerry.sample.frame.litepal.LitePalActivity;
 import com.jerry.sample.frame.tab.TabFragmentActivity;
 import com.jerry.sample.frame.xutils.XUtilsActivity;
 import com.jerry.sample.utils.MyActivityManager;
@@ -46,7 +47,7 @@ public class FrameActivity extends Activity {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long rowId) {
                 ListInfoBean infoBean = mListData.get(position);
-                String jumpActivity = infoBean.getActivity();
+                String jumpActivity = infoBean.getOperate();
                 if("xutils".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, XUtilsActivity.class, null);
                 } else  if("tab".equals(jumpActivity)){
@@ -55,6 +56,8 @@ public class FrameActivity extends Activity {
                     MyActivityManager.getInstance().startActivity(mContext, AlbumBucketActivity.class, null);
                 } else  if("crash".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, CrashActivity.class, null);
+                } else  if("litepal".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, LitePalActivity.class, null);
                 }
             }
         });
@@ -64,23 +67,28 @@ public class FrameActivity extends Activity {
 
         ListInfoBean xutils = new ListInfoBean();
         xutils.setTitle("XUtils框架");
-        xutils.setActivity("xutils");
+        xutils.setOperate("xutils");
         mListData.add(xutils);
 
         ListInfoBean tab = new ListInfoBean();
         tab.setTitle("Tab框架");
-        tab.setActivity("tab");
+        tab.setOperate("tab");
         mListData.add(tab);
 
         ListInfoBean album = new ListInfoBean();
         album.setTitle("相册");
-        album.setActivity("album");
+        album.setOperate("album");
         mListData.add(album);
 
         ListInfoBean crash = new ListInfoBean();
         crash.setTitle("Crash异常");
-        crash.setActivity("crash");
+        crash.setOperate("crash");
         mListData.add(crash);
+
+        ListInfoBean litepal = new ListInfoBean();
+        litepal.setTitle("数据库框架LitePal");
+        litepal.setOperate("litepal");
+        mListData.add(litepal);
 
     }
 

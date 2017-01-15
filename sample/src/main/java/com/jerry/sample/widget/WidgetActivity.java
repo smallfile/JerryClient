@@ -49,7 +49,7 @@ public class WidgetActivity extends Activity {
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long rowId) {
                 ListInfoBean infoBean = mListData.get(position);
-                String jumpActivity = infoBean.getActivity();
+                String jumpActivity = infoBean.getOperate();
                 if("nar_bar".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, NavigationBarActivity.class, null);
                 } else  if("post_code".equals(jumpActivity)){
@@ -91,82 +91,82 @@ public class WidgetActivity extends Activity {
 
         ListInfoBean narBar = new ListInfoBean();
         narBar.setTitle("导航条");
-        narBar.setActivity("nar_bar");
+        narBar.setOperate("nar_bar");
         mListData.add(narBar);
 
         ListInfoBean postCode = new ListInfoBean();
         postCode.setTitle("邮编");
-        postCode.setActivity("post_code");
+        postCode.setOperate("post_code");
         mListData.add(postCode);
 
         ListInfoBean progressBar = new ListInfoBean();
         progressBar.setTitle("菊花加载提示");
-        progressBar.setActivity("progress_bar");
+        progressBar.setOperate("progress_bar");
         mListData.add(progressBar);
 
         ListInfoBean myGridView = new ListInfoBean();
         myGridView.setTitle("自定义GridView");
-        myGridView.setActivity("my_grid_view");
+        myGridView.setOperate("my_grid_view");
         mListData.add(myGridView);
 
         ListInfoBean myListView = new ListInfoBean();
         myListView.setTitle("自定义ListView");
-        myListView.setActivity("my_list_view");
+        myListView.setOperate("my_list_view");
         mListData.add(myListView);
 
         ListInfoBean roundedImage = new ListInfoBean();
         roundedImage.setTitle("圆形图片控件");
-        roundedImage.setActivity("rounded_image");
+        roundedImage.setOperate("rounded_image");
         mListData.add(roundedImage);
 
         ListInfoBean uitableview = new ListInfoBean();
         uitableview.setTitle("UI Table View");
-        uitableview.setActivity("uitableview");
+        uitableview.setOperate("uitableview");
         mListData.add(uitableview);
 
         ListInfoBean password = new ListInfoBean();
         password.setTitle("密码控件");
-        password.setActivity("password");
+        password.setOperate("password");
         mListData.add(password);
 
         ListInfoBean progressButton = new ListInfoBean();
         progressButton.setTitle("Progress Button");
-        progressButton.setActivity("progress_button");
+        progressButton.setOperate("progress_button");
         mListData.add(progressButton);
 
         ListInfoBean zxing = new ListInfoBean();
         zxing.setTitle("二维码扫描");
-        zxing.setActivity("zxing");
+        zxing.setOperate("zxing");
         mListData.add(zxing);
 
         ListInfoBean slidingMenu = new ListInfoBean();
         slidingMenu.setTitle("侧边栏效果");
-        slidingMenu.setActivity("sliding_menu");
+        slidingMenu.setOperate("sliding_menu");
         mListData.add(slidingMenu);
 
         ListInfoBean segmentedRadio = new ListInfoBean();
         segmentedRadio.setTitle("Segmented Radio");
-        segmentedRadio.setActivity("segmented_radio");
+        segmentedRadio.setOperate("segmented_radio");
         mListData.add(segmentedRadio);
 
         ListInfoBean banner = new ListInfoBean();
         banner.setTitle("Banner");
-        banner.setActivity("banner");
+        banner.setOperate("banner");
         mListData.add(banner);
 
         ListInfoBean datetimer = new ListInfoBean();
         datetimer.setTitle("日期时间控件");
-        datetimer.setActivity("datetime");
+        datetimer.setOperate("datetime");
         mListData.add(datetimer);
 
         ListInfoBean calendar = new ListInfoBean();
         calendar.setTitle("日历控件");
-        calendar.setActivity("calendar");
+        calendar.setOperate("calendar");
         mListData.add(calendar);
 
         ListInfoBean calendar2 = new ListInfoBean();
         calendar2.setTitle("日历控件2");
-        calendar2.setActivity("calendar2");
+        calendar2.setOperate("calendar2");
         mListData.add(calendar2);
 
 

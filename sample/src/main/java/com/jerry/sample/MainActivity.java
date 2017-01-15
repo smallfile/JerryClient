@@ -44,7 +44,7 @@ public class MainActivity extends Activity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long rowId) {
 
                 ListInfoBean infoBean = mListData.get(position);
-                String jumpActivity = infoBean.getActivity();
+                String jumpActivity = infoBean.getOperate();
                 if("Frame".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, FrameActivity.class, null);
                 } else if("ListView".equals(jumpActivity)){
@@ -63,25 +63,25 @@ public class MainActivity extends Activity {
         ListInfoBean frame = new ListInfoBean();
         frame.setTitle("框架");
         frame.setSubTitle("常用的框架");
-        frame.setActivity("Frame");
+        frame.setOperate("Frame");
         mListData.add(frame);
 
         ListInfoBean listView = new ListInfoBean();
         listView.setTitle("ListView");
         listView.setSubTitle("常用的ListView");
-        listView.setActivity("ListView");
+        listView.setOperate("ListView");
         mListData.add(listView);
 
         ListInfoBean widget = new ListInfoBean();
         widget.setTitle("Widget");
         widget.setSubTitle("常用的控件");
-        widget.setActivity("Widget");
+        widget.setOperate("Widget");
         mListData.add(widget);
 
         ListInfoBean utils = new ListInfoBean();
         utils.setTitle("工具类");
         utils.setSubTitle("常用的工具");
-        utils.setActivity("Utils");
+        utils.setOperate("Utils");
         mListData.add(utils);
 
 
