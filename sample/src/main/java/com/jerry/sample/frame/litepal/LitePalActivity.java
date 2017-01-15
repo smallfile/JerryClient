@@ -25,6 +25,9 @@ import org.litepal.tablemanager.Connector;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * GitHub地址：https://github.com/LitePalFramework/LitePal
+ */
 public class LitePalActivity extends Activity {
 
     private Context mContext;
@@ -74,6 +77,18 @@ public class LitePalActivity extends Activity {
                     DataSupport.deleteAll(Book.class, "price < ?", "15");
 
                 } else  if("search".equals(operate)){
+                    //查询方法汇总
+                    //1. DataSupport.findAll(Book.class);　　　查询所有记录　
+                    //2. DataSupport.findFirst(Book.class);    查询第一条记录
+                    //3. DataSupport.findLast(Book.class);　　　查询最后一条记录
+                    //4. select("name")　　　 指定查询哪几列数据
+                    //5. where("pages > ?","23")　   指定查询条件
+                    //6. order()　指定结果的排列方式
+                    //7. limit()  指定查询结果的数量
+                    //8. offest()  指定查询结果的偏移量
+                    //9.　以上五项可以做任意组合
+                    //10. DataSupport.findBySQL("原生sql语句")　　　原生sql语句查询，返回Cursor
+
                     List<Book> books = DataSupport.findAll(Book.class);
                     for (Book book: books) {
                         StringBuffer sb = new StringBuffer();
