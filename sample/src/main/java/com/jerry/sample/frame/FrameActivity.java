@@ -12,6 +12,7 @@ import com.jerry.sample.ListInfoBean;
 import com.jerry.sample.R;
 import com.jerry.sample.frame.album.AlbumBucketActivity;
 import com.jerry.sample.frame.litepal.LitePalActivity;
+import com.jerry.sample.frame.okhttp.OkHttpActivity;
 import com.jerry.sample.frame.tab.TabFragmentActivity;
 import com.jerry.sample.frame.xutils.XUtilsActivity;
 import com.jerry.sample.utils.MyActivityManager;
@@ -58,6 +59,8 @@ public class FrameActivity extends Activity {
                     MyActivityManager.getInstance().startActivity(mContext, CrashActivity.class, null);
                 } else  if("litepal".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, LitePalActivity.class, null);
+                } else  if("okhttputils".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, OkHttpActivity.class, null);
                 }
             }
         });
@@ -89,6 +92,11 @@ public class FrameActivity extends Activity {
         litepal.setTitle("数据库框架LitePal");
         litepal.setOperate("litepal");
         mListData.add(litepal);
+
+        ListInfoBean okhttputils = new ListInfoBean();
+        okhttputils.setTitle("网络框架OkHttp");
+        okhttputils.setOperate("okhttputils");
+        mListData.add(okhttputils);
 
     }
 
