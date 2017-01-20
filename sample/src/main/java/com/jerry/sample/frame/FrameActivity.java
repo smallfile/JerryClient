@@ -13,7 +13,7 @@ import com.jerry.sample.R;
 import com.jerry.sample.frame.album.AlbumBucketActivity;
 import com.jerry.sample.frame.litepal.LitePalActivity;
 import com.jerry.sample.frame.okhttp.OkHttpActivity;
-import com.jerry.sample.frame.tab.TabFragmentActivity;
+import com.jerry.sample.frame.tab.tabhost.TabHostActivity;
 import com.jerry.sample.frame.xutils.XUtilsActivity;
 import com.jerry.sample.utils.MyActivityManager;
 
@@ -51,8 +51,8 @@ public class FrameActivity extends Activity {
                 String jumpActivity = infoBean.getOperate();
                 if("xutils".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, XUtilsActivity.class, null);
-                } else  if("tab".equals(jumpActivity)){
-                    MyActivityManager.getInstance().startActivity(mContext, TabFragmentActivity.class, null);
+                } else  if("activty_tab_tabhost".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, TabHostActivity.class, null);
                 } else  if("album".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, AlbumBucketActivity.class, null);
                 } else  if("crash".equals(jumpActivity)){
@@ -75,7 +75,7 @@ public class FrameActivity extends Activity {
 
         ListInfoBean tab = new ListInfoBean();
         tab.setTitle("Tab框架");
-        tab.setOperate("tab");
+        tab.setOperate("activty_tab_tabhost");
         mListData.add(tab);
 
         ListInfoBean album = new ListInfoBean();

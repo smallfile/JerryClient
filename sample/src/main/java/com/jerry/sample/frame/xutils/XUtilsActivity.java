@@ -13,7 +13,7 @@ import android.widget.TabHost;
 import android.widget.TextView;
 
 import com.jerry.sample.R;
-import com.jerry.sample.frame.tab.DefaultTabContentFragment;
+import com.jerry.sample.frame.tab.tabhost.DefaultTabContentFragment;
 
 public class XUtilsActivity extends FragmentActivity {
 
@@ -31,7 +31,7 @@ public class XUtilsActivity extends FragmentActivity {
     protected void onCreate(Bundle savedInstanceState) {
         requestWindowFeature(Window.FEATURE_NO_TITLE);
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.tab);
+        setContentView(R.layout.activty_tab_tabhost);
         tabHost = (TabHost) findViewById(android.R.id.tabhost);
         tabHost.setup();
 

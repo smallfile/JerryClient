@@ -1,4 +1,4 @@
-package com.jerry.sample.frame.tab;
+package com.jerry.sample.frame.tab.tabhost;
 
 import android.content.Context;
 import android.view.View;

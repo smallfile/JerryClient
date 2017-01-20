@@ -1,4 +1,4 @@
-package com.jerry.sample.frame.tab;
+package com.jerry.sample.frame.tab.tabhost;
 
 import android.content.Context;
 import android.os.Bundle;
@@ -15,7 +15,7 @@ import android.widget.TextView;
 
 import com.jerry.sample.R;
 
-public class TabFragmentActivity extends FragmentActivity {
+public class TabHostActivity extends FragmentActivity {
 
 	private static final String TAB_TAG_ONE = "one";
 	private static final String TAB_TAG_TWO = "two";
@@ -31,7 +31,7 @@ public class TabFragmentActivity extends FragmentActivity {
 	protected void onCreate(Bundle savedInstanceState) {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.tab);
+		setContentView(R.layout.activty_tab_tabhost);
 		tabHost = (TabHost) findViewById(android.R.id.tabhost);
 		tabHost.setup();
 		
