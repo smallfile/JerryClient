@@ -39,7 +39,7 @@ public class TabFragmentActivity extends FragmentActivity implements OnClickList
 		initEvent();
 		setSelect(0);
 	}
-	
+
 	private void initView() {
 		mTabWeixin = (LinearLayout) findViewById(R.id.id_tab_weixin);
 		mTabFrd = (LinearLayout) findViewById(R.id.id_tab_frd);

@@ -14,6 +14,7 @@ import com.jerry.sample.frame.CrashActivity;
 import com.jerry.sample.frame.album.AlbumBucketActivity;
 import com.jerry.sample.frame.litepal.LitePalActivity;
 import com.jerry.sample.frame.okhttp.OkHttpActivity;
+import com.jerry.sample.frame.tab.fpa.TabFPAActivity;
 import com.jerry.sample.frame.tab.fragment.TabFragmentActivity;
 import com.jerry.sample.frame.tab.tabhost.TabHostActivity;
 import com.jerry.sample.frame.tab.viewpager.TabViewPagerActivity;
@@ -58,10 +59,10 @@ public class TabActivity extends Activity {
                     MyActivityManager.getInstance().startActivity(mContext, TabViewPagerActivity.class, null);
                 } else  if("fragment".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, TabFragmentActivity.class, null);
-                } else  if("crash".equals(jumpActivity)){
-//                    MyActivityManager.getInstance().startActivity(mContext, CrashActivity.class, null);
-                } else  if("litepal".equals(jumpActivity)){
-//                    MyActivityManager.getInstance().startActivity(mContext, LitePalActivity.class, null);
+                } else  if("fpa".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, TabFPAActivity.class, null);
+                } else  if("vpi".equals(jumpActivity)){
+//                    MyActivityManager.getInstance().startActivity(mContext, TabVPIActivity.class, null);
                 }
             }
         });
@@ -84,15 +85,15 @@ public class TabActivity extends Activity {
         fragment.setOperate("fragment");
         mListData.add(fragment);
 
-        ListInfoBean crash = new ListInfoBean();
-        crash.setTitle("Crash异常");
-        crash.setOperate("crash");
-        mListData.add(crash);
+        ListInfoBean fpa = new ListInfoBean();
+        fpa.setTitle("ViewPager和FragmentPagerAdapter实现Tab");
+        fpa.setOperate("fpa");
+        mListData.add(fpa);
 
-        ListInfoBean litepal = new ListInfoBean();
-        litepal.setTitle("数据库框架LitePal");
-        litepal.setOperate("litepal");
-        mListData.add(litepal);
+        ListInfoBean vpi = new ListInfoBean();
+        vpi.setTitle("ViewPager和ViewPagerIndicator实现Tab");
+        vpi.setOperate("vpi");
+        mListData.add(vpi);
 
 
     }
