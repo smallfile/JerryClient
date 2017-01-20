@@ -1,4 +1,4 @@
-package com.jerry.sample.frame;
+package com.jerry.sample.frame.tab;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,17 +10,19 @@ import android.widget.ListView;
 import com.jerry.sample.ListInfoAdapter;
 import com.jerry.sample.ListInfoBean;
 import com.jerry.sample.R;
+import com.jerry.sample.frame.CrashActivity;
 import com.jerry.sample.frame.album.AlbumBucketActivity;
 import com.jerry.sample.frame.litepal.LitePalActivity;
 import com.jerry.sample.frame.okhttp.OkHttpActivity;
-import com.jerry.sample.frame.tab.TabActivity;
+import com.jerry.sample.frame.tab.tabhost.TabHostActivity;
+import com.jerry.sample.frame.tab.viewpager.TabViewPagerActivity;
 import com.jerry.sample.frame.xutils.XUtilsActivity;
 import com.jerry.sample.utils.MyActivityManager;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class FrameActivity extends Activity {
+public class TabActivity extends Activity {
 
     private Context mContext;
     private ListView mListView;
@@ -31,7 +33,7 @@ public class FrameActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mContext = FrameActivity.this;
+        mContext = TabActivity.this;
         mListData = new ArrayList<ListInfoBean>();
 
         initView();
@@ -49,18 +51,16 @@ public class FrameActivity extends Activity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long rowId) {
                 ListInfoBean infoBean = mListData.get(position);
                 String jumpActivity = infoBean.getOperate();
-                if("xutils".equals(jumpActivity)){
-                    MyActivityManager.getInstance().startActivity(mContext, XUtilsActivity.class, null);
-                } else  if("tab".equals(jumpActivity)){
-                    MyActivityManager.getInstance().startActivity(mContext, TabActivity.class, null);
+                if("tabhost".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, TabHostActivity.class, null);
+                } else  if("viewpager".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, TabViewPagerActivity.class, null);
                 } else  if("album".equals(jumpActivity)){
-                    MyActivityManager.getInstance().startActivity(mContext, AlbumBucketActivity.class, null);
+//                    MyActivityManager.getInstance().startActivity(mContext, AlbumBucketActivity.class, null);
                 } else  if("crash".equals(jumpActivity)){
-                    MyActivityManager.getInstance().startActivity(mContext, CrashActivity.class, null);
+//                    MyActivityManager.getInstance().startActivity(mContext, CrashActivity.class, null);
                 } else  if("litepal".equals(jumpActivity)){
-                    MyActivityManager.getInstance().startActivity(mContext, LitePalActivity.class, null);
-                } else  if("okhttputils".equals(jumpActivity)){
-                    MyActivityManager.getInstance().startActivity(mContext, OkHttpActivity.class, null);
+//                    MyActivityManager.getInstance().startActivity(mContext, LitePalActivity.class, null);
                 }
             }
         });
@@ -68,15 +68,15 @@ public class FrameActivity extends Activity {
 
     private void initData(){
 
-        ListInfoBean xutils = new ListInfoBean();
-        xutils.setTitle("XUtils框架");
-        xutils.setOperate("xutils");
-        mListData.add(xutils);
+        ListInfoBean tabhost = new ListInfoBean();
+        tabhost.setTitle("TabHost实现Tab");
+        tabhost.setOperate("tabhost");
+        mListData.add(tabhost);
 
-        ListInfoBean tab = new ListInfoBean();
-        tab.setTitle("Tab框架");
-        tab.setOperate("tab");
-        mListData.add(tab);
+        ListInfoBean viewpager = new ListInfoBean();
+        viewpager.setTitle("ViewPager实现Tab");
+        viewpager.setOperate("viewpager");
+        mListData.add(viewpager);
 
         ListInfoBean album = new ListInfoBean();
         album.setTitle("相册");
@@ -93,10 +93,6 @@ public class FrameActivity extends Activity {
         litepal.setOperate("litepal");
         mListData.add(litepal);
 
-        ListInfoBean okhttputils = new ListInfoBean();
-        okhttputils.setTitle("网络框架OkHttp");
-        okhttputils.setOperate("okhttputils");
-        mListData.add(okhttputils);
 
     }
 
