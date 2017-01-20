@@ -14,6 +14,7 @@ import com.jerry.sample.frame.CrashActivity;
 import com.jerry.sample.frame.album.AlbumBucketActivity;
 import com.jerry.sample.frame.litepal.LitePalActivity;
 import com.jerry.sample.frame.okhttp.OkHttpActivity;
+import com.jerry.sample.frame.tab.fragment.TabFragmentActivity;
 import com.jerry.sample.frame.tab.tabhost.TabHostActivity;
 import com.jerry.sample.frame.tab.viewpager.TabViewPagerActivity;
 import com.jerry.sample.frame.xutils.XUtilsActivity;
@@ -55,8 +56,8 @@ public class TabActivity extends Activity {
                     MyActivityManager.getInstance().startActivity(mContext, TabHostActivity.class, null);
                 } else  if("viewpager".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, TabViewPagerActivity.class, null);
-                } else  if("album".equals(jumpActivity)){
-//                    MyActivityManager.getInstance().startActivity(mContext, AlbumBucketActivity.class, null);
+                } else  if("fragment".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, TabFragmentActivity.class, null);
                 } else  if("crash".equals(jumpActivity)){
 //                    MyActivityManager.getInstance().startActivity(mContext, CrashActivity.class, null);
                 } else  if("litepal".equals(jumpActivity)){
@@ -78,10 +79,10 @@ public class TabActivity extends Activity {
         viewpager.setOperate("viewpager");
         mListData.add(viewpager);
 
-        ListInfoBean album = new ListInfoBean();
-        album.setTitle("相册");
-        album.setOperate("album");
-        mListData.add(album);
+        ListInfoBean fragment = new ListInfoBean();
+        fragment.setTitle("Fragment实现Tab");
+        fragment.setOperate("fragment");
+        mListData.add(fragment);
 
         ListInfoBean crash = new ListInfoBean();
         crash.setTitle("Crash异常");
