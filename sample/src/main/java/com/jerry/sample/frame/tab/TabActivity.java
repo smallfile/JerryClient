@@ -16,6 +16,7 @@ import com.jerry.sample.frame.litepal.LitePalActivity;
 import com.jerry.sample.frame.okhttp.OkHttpActivity;
 import com.jerry.sample.frame.tab.fpa.TabFPAActivity;
 import com.jerry.sample.frame.tab.fragment.TabFragmentActivity;
+import com.jerry.sample.frame.tab.indicator.TabIndicatorActivity;
 import com.jerry.sample.frame.tab.tabhost.TabHostActivity;
 import com.jerry.sample.frame.tab.viewpager.TabViewPagerActivity;
 import com.jerry.sample.frame.xutils.XUtilsActivity;
@@ -61,8 +62,8 @@ public class TabActivity extends Activity {
                     MyActivityManager.getInstance().startActivity(mContext, TabFragmentActivity.class, null);
                 } else  if("fpa".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, TabFPAActivity.class, null);
-                } else  if("vpi".equals(jumpActivity)){
-//                    MyActivityManager.getInstance().startActivity(mContext, TabVPIActivity.class, null);
+                } else  if("indicator".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, TabIndicatorActivity.class, null);
                 }
             }
         });
@@ -90,10 +91,10 @@ public class TabActivity extends Activity {
         fpa.setOperate("fpa");
         mListData.add(fpa);
 
-        ListInfoBean vpi = new ListInfoBean();
-        vpi.setTitle("ViewPager和ViewPagerIndicator实现Tab");
-        vpi.setOperate("vpi");
-        mListData.add(vpi);
+        ListInfoBean indicator = new ListInfoBean();
+        indicator.setTitle("Indicator实现Tab");
+        indicator.setOperate("indicator");
+        mListData.add(indicator);
 
 
     }

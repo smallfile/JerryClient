@@ -54,28 +54,15 @@ public class WelcomeActivity extends AppCompatActivity implements View.OnClickLi
                 LinearLayout.LayoutParams.MATCH_PARENT,
                 LinearLayout.LayoutParams.MATCH_PARENT);
 
-        if (!JUtils.isNetWorkAvilable()) {
-            for (int i = 0; i < Config.pics.length; i++) {
-                length = Config.pics.length;
-                SimpleDraweeView iv = new SimpleDraweeView(this);
-                iv.setLayoutParams(mParams);
-                //防止图片不能填满屏幕
-                iv.setScaleType(ImageView.ScaleType.FIT_XY);
-                //加载图片资源
-                iv.setImageResource(Config.pics[i]);
-                views.add(iv);
-            }
-        } else {
-            for (int i = 0; i < Config.pricUrls.length; i++) {
-                length = Config.pricUrls.length;
-                SimpleDraweeView iv = new SimpleDraweeView(this);
-                iv.setLayoutParams(mParams);
-                //防止图片不能填满屏幕
-                iv.setScaleType(ImageView.ScaleType.FIT_XY);
-                //加载图片资源
-                iv.setImageURI(Uri.parse(Config.pricUrls[i]));
-                views.add(iv);
-            }
+        for (int i = 0; i < Config.pics.length; i++) {
+            length = Config.pics.length;
+            SimpleDraweeView iv = new SimpleDraweeView(this);
+            iv.setLayoutParams(mParams);
+            //防止图片不能填满屏幕
+            iv.setScaleType(ImageView.ScaleType.FIT_XY);
+            //加载图片资源
+            iv.setImageResource(Config.pics[i]);
+            views.add(iv);
         }
 
         viewPager.setAdapter(adapter);

@@ -44,7 +44,7 @@ public class MyApplication extends Application {
         super.onCreate();
 
         //初例化未捕获异常监听器
-        CrashHandler.getInstance().init(getApplicationContext());
+//        CrashHandler.getInstance().init(getApplicationContext());
 
         //XUtils初使化
         x.Ext.init(this);

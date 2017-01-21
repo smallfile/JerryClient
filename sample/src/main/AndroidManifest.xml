@@ -76,6 +76,53 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
+            android:name=".frame.tab.indicator.TabIndicatorActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".frame.tab.indicator.BannerActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".frame.tab.indicator.GuideActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".frame.tab.indicator.SingleTabActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".frame.tab.indicator.SpringActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".frame.tab.indicator.tab.TabMoreActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".frame.tab.indicator.year.YearActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".frame.tab.indicator.tab.TabActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name=".frame.tab.indicator.tab.TabMore2Activity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+
+
+        <activity
             android:name=".frame.album.AlbumBucketActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" >
