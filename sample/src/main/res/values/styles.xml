@@ -24,5 +24,9 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
+    <style name="anim_popup_dir">
+        <item name="android:windowEnterAnimation">@anim/wxalbum_slide_in</item>
+        <item name="android:windowExitAnimation">@anim/wxalbum_slide_out</item>
+    </style>
 
 </resources>

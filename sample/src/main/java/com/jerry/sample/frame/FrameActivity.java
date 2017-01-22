@@ -14,6 +14,7 @@ import com.jerry.sample.frame.album.AlbumBucketActivity;
 import com.jerry.sample.frame.litepal.LitePalActivity;
 import com.jerry.sample.frame.okhttp.OkHttpActivity;
 import com.jerry.sample.frame.tab.TabActivity;
+import com.jerry.sample.frame.wxalbum.WXAlbumActivity;
 import com.jerry.sample.frame.xutils.XUtilsActivity;
 import com.jerry.sample.utils.MyActivityManager;
 
@@ -55,6 +56,8 @@ public class FrameActivity extends Activity {
                     MyActivityManager.getInstance().startActivity(mContext, TabActivity.class, null);
                 } else  if("album".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, AlbumBucketActivity.class, null);
+                } else  if("wxalbum".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, WXAlbumActivity.class, null);
                 } else  if("crash".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, CrashActivity.class, null);
                 } else  if("litepal".equals(jumpActivity)){
@@ -82,6 +85,11 @@ public class FrameActivity extends Activity {
         album.setTitle("相册");
         album.setOperate("album");
         mListData.add(album);
+
+        ListInfoBean wxalbum = new ListInfoBean();
+        wxalbum.setTitle("仿微信相册");
+        wxalbum.setOperate("wxalbum");
+        mListData.add(wxalbum);
 
         ListInfoBean crash = new ListInfoBean();
         crash.setTitle("Crash异常");
