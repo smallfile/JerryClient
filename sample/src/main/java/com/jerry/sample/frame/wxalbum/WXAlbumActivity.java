@@ -7,11 +7,14 @@ import java.util.Arrays;
 import java.util.HashSet;
 import java.util.List;
 
+import android.Manifest;
 import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.ContentResolver;
+import android.content.pm.PackageManager;
 import android.database.Cursor;
 import android.net.Uri;
+import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
 import android.os.Handler;
@@ -147,6 +150,46 @@ public class WXAlbumActivity extends Activity implements OnImageDirSelected {
 			Toast.makeText(this, "暂无外部存储", Toast.LENGTH_SHORT).show();
 			return;
 		}
+
+		if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.M) {
+			int hasReadStoragePermission = checkSelfPermission(Manifest.permission.READ_EXTERNAL_STORAGE);
+			List<String> permissions = new ArrayList<String>();
+			if (hasReadStoragePermission != PackageManager.PERMISSION_GRANTED) {
+				permissions.add(Manifest.permission.READ_EXTERNAL_STORAGE);
+			} else {
+				loadImage();
+			}
+
+			if (!permissions.isEmpty()) {
+				requestPermissions(permissions.toArray(new String[permissions.size()]), REQUEST_CODE_SOME_FEATURES_PERMISSIONS);
+			}
+		}else {//小于6.0
+			loadImage();
+		}
+
+	}
+
+	public static final int  REQUEST_CODE_SOME_FEATURES_PERMISSIONS = 1;
+	@Override
+	public void onRequestPermissionsResult(int requestCode, String[] permissions, int[] grantResults) {
+		switch (requestCode) {
+			case REQUEST_CODE_SOME_FEATURES_PERMISSIONS: {
+				for (int i = 0; i < permissions.length; i++) {
+					if (grantResults[i] == PackageManager.PERMISSION_GRANTED) {
+						loadImage();
+					} else if (grantResults[i] == PackageManager.PERMISSION_DENIED) {
+						Toast.makeText(this,"禁止使用此权限",Toast.LENGTH_LONG).show();
+					}
+				}
+			}
+			break;
+			default: {
+				super.onRequestPermissionsResult(requestCode, permissions, grantResults);
+			}
+		}
+	}
+
+	private void loadImage(){
 		// 显示进度条
 		mProgressDialog = ProgressDialog.show(this, null, "正在加载...");
 
@@ -224,7 +267,6 @@ public class WXAlbumActivity extends Activity implements OnImageDirSelected {
 
 			}
 		}).start();
-
 	}
 
 	/**
