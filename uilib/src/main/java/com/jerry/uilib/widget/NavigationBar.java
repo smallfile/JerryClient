@@ -71,13 +71,13 @@ public class NavigationBar extends RelativeLayout {
 			int visibleType = attrsType.getInt(R.styleable.navigation_bar_statusBarVisibility, 0);
 			switch(visibleType) {
 				case 0:
-					navLeftBtn.setVisibility(View.GONE);
+					navStatusBar.setVisibility(View.GONE);
 					break;
 				case 1:
-					navLeftBtn.setVisibility(View.VISIBLE);
+					navStatusBar.setVisibility(View.VISIBLE);
 					break;
 				case 2:
-					navLeftBtn.setVisibility(View.INVISIBLE);
+					navStatusBar.setVisibility(View.INVISIBLE);
 					break;
 			}
 		}
