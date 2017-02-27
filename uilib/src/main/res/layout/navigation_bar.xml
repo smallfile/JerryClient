@@ -1,65 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="fill_parent"
-    android:layout_height="50dp">
-
-    <Button
-        android:id="@+id/nav_left_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:layout_marginLeft="10dp"
-        android:textSize="20sp" 
-        android:minHeight="40dp"
-        android:minWidth="40dp" />
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
 
     <TextView
-        android:id="@+id/nav_title"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
-        android:gravity="center"
-        android:singleLine="true"
-        android:textSize="20sp" />
+        android:id="@+id/nav_status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        />
     
-    <LinearLayout
-        android:id="@+id/nav_right_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_centerInParent="true"
-        android:orientation="horizontal" >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
 
-        <Button
-            android:id="@+id/nav_right_btn1"
+        <LinearLayout
+            android:id="@+id/nav_left_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minHeight="40dp"
-            android:minWidth="40dp"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/nav_left_btn"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/nav_left_back"
+                android:layout_width="20dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/nav_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:singleLine="true"
             android:textSize="20sp" />
 
-        <Button
-            android:id="@+id/nav_right_btn2"
+        <LinearLayout
+            android:id="@+id/nav_right_layout"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginLeft="5dp"
-            android:layout_marginRight="5dp"
-            android:minHeight="40dp"
-            android:minWidth="40dp"
-            android:textSize="20sp" />
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:orientation="horizontal">
 
-        <Button
-            android:id="@+id/nav_right_btn3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:minHeight="40dp"
-            android:minWidth="40dp"
-            android:layout_marginRight="10dp"
-            android:textSize="20sp" />
+            <Button
+                android:id="@+id/nav_right_btn1"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:textSize="16sp" />
 
-    </LinearLayout>
-    
-    
-</RelativeLayout>
+            <Button
+                android:id="@+id/nav_right_btn2"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_margin="10dp"
+                android:minHeight="30dp"
+                android:minWidth="30dp"
+                android:textSize="16sp" />
+
+            <Button
+                android:id="@+id/nav_right_btn3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+</LinearLayout>
