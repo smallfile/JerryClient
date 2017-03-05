@@ -10,9 +10,12 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:background="@color/navigation_bar_background"
+        navigationBar:statusBarVisibility="gone"
         navigationBar:leftBtnVisibility="visible"
         navigationBar:leftBtnBackground="@drawable/nav_bar_left_button"
-        navigationBar:rightBtn1Visibility="invisible"
+        navigationBar:leftBackVisibility="visible"
+        navigationBar:leftBackBackground="@drawable/nav_bar_left_button"
+        navigationBar:rightBtn1Visibility="visible"
         navigationBar:rightBtn1Background="@drawable/nav_bar_right_button"
         navigationBar:rightBtn2Visibility="visible"
         navigationBar:rightBtn2Background="@drawable/nav_bar_right_button"
@@ -21,7 +24,7 @@
         navigationBar:rightBtn3Background="@android:color/transparent"
         navigationBar:rightBtn3Color="@android:color/white"
         navigationBar:titleName="导航条"
-        navigationBar:titleColor="@color/base_gray"/>
+        navigationBar:titleColor="@color/base_white"/>
 
     <TextView
         android:id="@+id/nav_bar_activity_content"
