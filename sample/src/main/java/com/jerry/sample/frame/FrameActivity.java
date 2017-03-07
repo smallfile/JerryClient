@@ -64,6 +64,8 @@ public class FrameActivity extends Activity {
                     MyActivityManager.getInstance().startActivity(mContext, LitePalActivity.class, null);
                 } else  if("okhttputils".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, OkHttpActivity.class, null);
+                } else  if("permission".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, PermissionActivity.class, null);
                 }
             }
         });
@@ -105,6 +107,12 @@ public class FrameActivity extends Activity {
         okhttputils.setTitle("网络框架OkHttp");
         okhttputils.setOperate("okhttputils");
         mListData.add(okhttputils);
+
+        ListInfoBean permission = new ListInfoBean();
+        permission.setTitle("运行时权限");
+        permission.setOperate("permission");
+        mListData.add(permission);
+
 
     }
 
