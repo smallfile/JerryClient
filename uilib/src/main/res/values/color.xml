@@ -11,5 +11,11 @@
     <color name="base_transparent">#000000</color>
     <color name="base_pink">#FFFF99</color>
     <color name="base_red">#900</color>
-    
+
+    <color name="dialog_custom_background">#FFFFFF</color>
+    <color name="dialog_custom_title">#181818</color>
+    <color name="dialog_custom_message">#181818</color>
+    <color name="dialog_custom_btn">#1E90FF</color>
+    <color name="dialog_custom_divider">#d1d1d1</color>
+
 </resources>

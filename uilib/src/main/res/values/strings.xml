@@ -6,6 +6,9 @@
     <string name="common_ok">确定</string>
     <string name="common_cancel">取消</string>
 
-
+    <string name="dialog_custom_title">消息标题</string>
+    <string name="dialog_custom_message">消息提示</string>
+    <string name="dialog_custom_ok">确定</string>
+    <string name="dialog_custom_cancel">取消</string>
 
 </resources>
