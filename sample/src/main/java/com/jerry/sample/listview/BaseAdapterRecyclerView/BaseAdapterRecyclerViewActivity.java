@@ -1,4 +1,4 @@
-package com.jerry.sample.listview;
+package com.jerry.sample.listview.BaseAdapterRecyclerView;
 
 import android.app.Activity;
 import android.content.Context;
@@ -6,11 +6,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ListView;
+
 import com.jerry.sample.ListInfoAdapter;
 import com.jerry.sample.ListInfoBean;
 import com.jerry.sample.R;
-import com.jerry.sample.listview.BaseAdapterListView.BaseAdapterListViewActivity;
-import com.jerry.sample.listview.BaseAdapterRecyclerView.BaseAdapterRecyclerViewActivity;
 import com.jerry.sample.listview.pulltorefresh.PullToRefreshActivity;
 import com.jerry.sample.listview.recyclerview.RecyclerViewActivity;
 import com.jerry.sample.utils.MyActivityManager;
@@ -18,7 +17,7 @@ import com.jerry.sample.utils.MyActivityManager;
 import java.util.ArrayList;
 import java.util.List;
 
-public class ListViewActivity extends Activity {
+public class BaseAdapterRecyclerViewActivity extends Activity {
 
     private Context mContext;
     private ListView mListView;
@@ -29,7 +28,7 @@ public class ListViewActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mContext = ListViewActivity.this;
+        mContext = BaseAdapterRecyclerViewActivity.this;
         mListData = new ArrayList<ListInfoBean>();
 
         initView();
@@ -51,10 +50,6 @@ public class ListViewActivity extends Activity {
                     MyActivityManager.getInstance().startActivity(mContext, PullToRefreshActivity.class, null);
                 } else if("RecyclerViewPtr".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, RecyclerViewActivity.class, null);
-                } else if("baseAdapterListView".equals(jumpActivity)){
-                    MyActivityManager.getInstance().startActivity(mContext, BaseAdapterListViewActivity.class, null);
-                } else if("baseAdapterRecyclerView".equals(jumpActivity)){
-                    MyActivityManager.getInstance().startActivity(mContext, BaseAdapterRecyclerViewActivity.class, null);
                 }
             }
         });
@@ -72,15 +67,7 @@ public class ListViewActivity extends Activity {
         recyclerview.setOperate("RecyclerViewPtr");
         mListData.add(recyclerview);
 
-        ListInfoBean baseAdapterListView = new ListInfoBean();
-        baseAdapterListView.setTitle("快速开发ListView");
-        baseAdapterListView.setOperate("baseAdapterListView");
-        mListData.add(baseAdapterListView);
 
-        ListInfoBean baseAdapterRecyclerView = new ListInfoBean();
-        baseAdapterRecyclerView.setTitle("快速开发RecyclerView");
-        baseAdapterRecyclerView.setOperate("baseAdapterRecyclerView");
-        mListData.add(baseAdapterRecyclerView);
 
     }
 

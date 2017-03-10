@@ -67,7 +67,7 @@ public class MainActivity extends Activity {
         mListData.add(frame);
 
         ListInfoBean listView = new ListInfoBean();
-        listView.setTitle("ListView");
+        listView.setTitle("列表");
         listView.setSubTitle("常用的ListView");
         listView.setOperate("ListView");
         mListData.add(listView);

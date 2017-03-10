@@ -244,6 +244,33 @@
             android:name=".listview.recyclerview.SwipeMenuActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".listview.BaseAdapterListView.BaseAdapterListViewActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".listview.BaseAdapterListView.BAListViewCommon"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".listview.BaseAdapterListView.BAListViewSingle"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".listview.BaseAdapterListView.BAListViewComplex"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".listview.BaseAdapterListView.BAListViewChat"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+
+        <activity
+            android:name=".listview.BaseAdapterRecyclerView.BaseAdapterRecyclerViewActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+
         <!--  列表页面　结束   -->
 
         <!--  自定义控件页面　开始   -->

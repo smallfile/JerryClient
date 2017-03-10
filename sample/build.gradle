@@ -50,4 +50,9 @@ dependencies {
     //运行时权限
     apt 'com.zhy:mpermission-compiler:1.0.0'
     compile 'com.zhy:mpermission-api:1.0.0'
+
+    //快速开发
+    compile 'com.zhy:base-adapter:3.0.3'
+    compile 'com.zhy:base-rvadapter:3.0.3'
+
 }
