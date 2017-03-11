@@ -10,6 +10,11 @@ import android.widget.ListView;
 import com.jerry.sample.ListInfoAdapter;
 import com.jerry.sample.ListInfoBean;
 import com.jerry.sample.R;
+import com.jerry.sample.listview.BaseAdapterListView.BAListViewChat;
+import com.jerry.sample.listview.BaseAdapterListView.BAListViewCommon;
+import com.jerry.sample.listview.BaseAdapterListView.BAListViewComplex;
+import com.jerry.sample.listview.BaseAdapterListView.BAListViewSingle;
+import com.jerry.sample.listview.BaseAdapterListView.BaseAdapterListViewActivity;
 import com.jerry.sample.listview.pulltorefresh.PullToRefreshActivity;
 import com.jerry.sample.listview.recyclerview.RecyclerViewActivity;
 import com.jerry.sample.utils.MyActivityManager;
@@ -46,10 +51,20 @@ public class BaseAdapterRecyclerViewActivity extends Activity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long rowId) {
                 ListInfoBean infoBean = mListData.get(position);
                 String jumpActivity = infoBean.getOperate();
-                if("ListViewPtr".equals(jumpActivity)){
-                    MyActivityManager.getInstance().startActivity(mContext, PullToRefreshActivity.class, null);
-                } else if("RecyclerViewPtr".equals(jumpActivity)){
-                    MyActivityManager.getInstance().startActivity(mContext, RecyclerViewActivity.class, null);
+                if("recyclerview0".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, BARecyclerViewCommon.class, null);
+                } else if("recyclerview1".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, BARecyclerViewSingle.class, null);
+                } else if("recyclerview2".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, BARecyclerViewComplex.class, null);
+                } else if("recyclerview3".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, BAListViewChat.class, null);
+                } else if("recyclerview4".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, BAListViewChat.class, null);
+                } else if("recyclerview5".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, BAListViewChat.class, null);
+                } else if("recyclerview6".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, BAListViewChat.class, null);
                 }
             }
         });
@@ -57,18 +72,40 @@ public class BaseAdapterRecyclerViewActivity extends Activity {
 
     private void initData(){
 
-        ListInfoBean pulltorefresh = new ListInfoBean();
-        pulltorefresh.setTitle("ListView下拉刷新，下拉加载");
-        pulltorefresh.setOperate("ListViewPtr");
-        mListData.add(pulltorefresh);
+        ListInfoBean recyclerview0 = new ListInfoBean();
+        recyclerview0.setTitle("加载单行数据(普通方式)");
+        recyclerview0.setOperate("recyclerview0");
+        mListData.add(recyclerview0);
 
-        ListInfoBean recyclerview = new ListInfoBean();
-        recyclerview.setTitle("RecyclerView下拉刷新，下拉加载");
-        recyclerview.setOperate("RecyclerViewPtr");
-        mListData.add(recyclerview);
+        ListInfoBean recyclerview1 = new ListInfoBean();
+        recyclerview1.setTitle("加载单行数据");
+        recyclerview1.setOperate("recyclerview1");
+        mListData.add(recyclerview1);
 
+        ListInfoBean recyclerview2 = new ListInfoBean();
+        recyclerview2.setTitle("加载复杂数据");
+        recyclerview2.setOperate("recyclerview2");
+        mListData.add(recyclerview2);
 
+        ListInfoBean recyclerview3 = new ListInfoBean();
+        recyclerview3.setTitle("聊天布局");
+        recyclerview3.setOperate("recyclerview3");
+        mListData.add(recyclerview3);
 
+        ListInfoBean recyclerview4 = new ListInfoBean();
+        recyclerview4.setTitle("头部和尾部");
+        recyclerview4.setOperate("recyclerview4");
+        mListData.add(recyclerview3);
+
+        ListInfoBean recyclerview5 = new ListInfoBean();
+        recyclerview5.setTitle("加载更多");
+        recyclerview5.setOperate("recyclerview5");
+        mListData.add(recyclerview5);
+
+        ListInfoBean recyclerview6 = new ListInfoBean();
+        recyclerview6.setTitle("加载更多");
+        recyclerview6.setOperate("recyclerview6");
+        mListData.add(recyclerview6);
     }
 
 }

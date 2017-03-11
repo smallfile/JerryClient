@@ -3,7 +3,10 @@ package com.jerry.sample.listview.BaseAdapterListView;
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
+import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import com.jerry.sample.R;
 import com.zhy.adapter.abslistview.CommonAdapter;
@@ -29,10 +32,25 @@ public class BAListViewSingle extends Activity {
         setContentView(R.layout.activity_ba_listview);
 
         mListView = (ListView)findViewById(R.id.list_view);
-        mListView.setAdapter(new CommonAdapter<String>(getApplicationContext(),R.layout.ba_listview_single,mList) {
+        mListView.setAdapter(new CommonAdapter<String>(getApplicationContext(),R.layout.ba_single,mList) {
             @Override
             protected void convert(ViewHolder viewHolder, String item, int position) {
                 viewHolder.setText(R.id.text,item);
+            }
+        });
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(BAListViewSingle.this, "点击事件", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        mListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(BAListViewSingle.this, "长按事件", Toast.LENGTH_LONG).show();
+                return false;
             }
         });
 

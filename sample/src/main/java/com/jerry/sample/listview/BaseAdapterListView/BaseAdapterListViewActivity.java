@@ -46,8 +46,7 @@ public class BaseAdapterListViewActivity extends Activity {
                 String jumpActivity = infoBean.getOperate();
                 if("listview0".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, BAListViewCommon.class, null);
-                } else
-                if("listview1".equals(jumpActivity)){
+                } else if("listview1".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, BAListViewSingle.class, null);
                 } else if("listview2".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, BAListViewComplex.class, null);

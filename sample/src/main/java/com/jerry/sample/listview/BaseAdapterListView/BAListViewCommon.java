@@ -7,13 +7,13 @@ import android.support.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.jerry.sample.R;
-import com.zhy.adapter.abslistview.CommonAdapter;
-import com.zhy.adapter.abslistview.ViewHolder;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -36,6 +36,21 @@ public class BAListViewCommon extends Activity {
 
         mListView = (ListView)findViewById(R.id.list_view);
         mListView.setAdapter(new MyAdapter(this, mList));
+
+        mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(BAListViewCommon.this, "点击事件", Toast.LENGTH_LONG).show();
+            }
+        });
+
+        mListView.setOnItemLongClickListener(new AdapterView.OnItemLongClickListener() {
+            @Override
+            public boolean onItemLongClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Toast.makeText(BAListViewCommon.this, "长按事件", Toast.LENGTH_LONG).show();
+                return false;
+            }
+        });
 
     }
 
@@ -70,7 +85,7 @@ public class BAListViewCommon extends Activity {
         public View getView(int position, View convertView, ViewGroup parent) {
             ViewHolder viewHolder = null;
             if (convertView == null) {
-                convertView = mInflater.inflate(R.layout.ba_listview_single, parent, false);
+                convertView = mInflater.inflate(R.layout.ba_single, parent, false);
                 viewHolder = new ViewHolder();
                 viewHolder.mTextView = (TextView) convertView
                         .findViewById(R.id.text);
