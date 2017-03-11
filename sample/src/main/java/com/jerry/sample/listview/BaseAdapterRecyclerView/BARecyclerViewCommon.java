@@ -9,12 +9,14 @@ import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.jerry.sample.R;
+import com.zhy.adapter.recyclerview.CommonAdapter;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -38,7 +40,22 @@ public class BARecyclerViewCommon extends Activity {
         initData();
         mRecyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mRecyclerView.setAdapter(new MyAdapter());
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
+        mRecyclerView.setAdapter(mAdapter = new MyAdapter());
+
+        // 点击事件和长按事件
+//        mAdapter.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+//            @Override
+//            public void onItemClick(View view, RecyclerView.ViewHolder holder,  int position) {
+//                Toast.makeText(BARecyclerViewCommon.this, "点击事件：" + position , Toast.LENGTH_SHORT).show();
+//            }
+//
+//            @Override
+//            public boolean onItemLongClick(View view, RecyclerView.ViewHolder holder, int position) {
+//                Toast.makeText(BARecyclerViewCommon.this, "长按事件：" + position , Toast.LENGTH_SHORT).show();
+//                return false;
+//            }
+//        });
 
     }
 

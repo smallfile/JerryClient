@@ -34,6 +34,7 @@ public class BARecyclerViewComplex extends Activity {
 
         mRecyclerView = (RecyclerView)findViewById(R.id.recyclerview);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
         mRecyclerView.setAdapter(new CommonAdapter<TestData>(getApplicationContext(),R.layout.ba_complex,mList) {
             @Override
             protected void convert(ViewHolder viewHolder, TestData item, int position) {

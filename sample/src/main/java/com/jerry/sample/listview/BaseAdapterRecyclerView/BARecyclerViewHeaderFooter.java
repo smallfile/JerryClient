@@ -34,6 +34,7 @@ public class BARecyclerViewHeaderFooter extends Activity {
 
         mRecyclerView = (RecyclerView)findViewById(R.id.recyclerview);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
         mCommonAdapter = new CommonAdapter<String>(this, R.layout.ba_single, mList) {
             @Override
             protected void convert(ViewHolder holder, String item, int position) {

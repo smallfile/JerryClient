@@ -23,6 +23,7 @@ import java.util.List;
 public class BARecyclerViewSingle extends Activity {
 
     private RecyclerView mRecyclerView;
+    private CommonAdapter mCommonAdapter;
     private List<String> mList = new ArrayList<String>(
             Arrays.asList("aaa", "bbb", "ccc", "ddd","eee"));
 
@@ -33,12 +34,29 @@ public class BARecyclerViewSingle extends Activity {
 
         mRecyclerView = (RecyclerView)findViewById(R.id.recyclerview);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mRecyclerView.setAdapter(new CommonAdapter<String>(this, R.layout.ba_single, mList) {
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
+        mCommonAdapter = new CommonAdapter<String>(this, R.layout.ba_single, mList) {
             @Override
             protected void convert(ViewHolder holder, String item, int position) {
                 holder.setText(R.id.text, item);
             }
+        };
+        mRecyclerView.setAdapter(mCommonAdapter);
+
+        // 点击事件和长按事件
+        mCommonAdapter.setOnItemClickListener(new CommonAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(View view, RecyclerView.ViewHolder holder,  int position) {
+                Toast.makeText(BARecyclerViewSingle.this, "点击事件：" + position , Toast.LENGTH_SHORT).show();
+            }
+
+            @Override
+            public boolean onItemLongClick(View view, RecyclerView.ViewHolder holder, int position) {
+                Toast.makeText(BARecyclerViewSingle.this, "长按事件：" + position , Toast.LENGTH_SHORT).show();
+                return false;
+            }
         });
+
 
 
     }
