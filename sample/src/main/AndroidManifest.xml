@@ -282,6 +282,22 @@
             android:name=".listview.BaseAdapterRecyclerView.BARecyclerViewComplex"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"/>
+        <activity
+            android:name=".listview.BaseAdapterRecyclerView.BARecyclerViewChat"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".listview.BaseAdapterRecyclerView.BARecyclerViewHeaderFooter"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".listview.BaseAdapterRecyclerView.BARecyclerViewPullToRefresh"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".listview.BaseAdapterRecyclerView.BARecyclerViewEmptyView"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"/>
 
         <!--  列表页面　结束   -->
 

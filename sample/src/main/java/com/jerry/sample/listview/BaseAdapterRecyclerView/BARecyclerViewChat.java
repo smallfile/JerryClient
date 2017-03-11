@@ -5,10 +5,12 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.view.View;
-import android.widget.Toast;
+import android.widget.ListView;
 
 import com.jerry.sample.R;
+import com.jerry.sample.listview.BaseAdapterListView.adapter.ChatAdapterForListView;
+import com.jerry.sample.listview.BaseAdapterRecyclerView.adapter.ChatAdapterForRecyclerView;
+import com.jerry.sample.listview.ChatMessage;
 import com.zhy.adapter.recyclerview.CommonAdapter;
 import com.zhy.adapter.recyclerview.base.ViewHolder;
 
@@ -20,25 +22,19 @@ import java.util.List;
  * Created by jerry on 2017/3/9.
  */
 
-public class BARecyclerViewSingle extends Activity {
+public class BARecyclerViewChat extends Activity {
 
     private RecyclerView mRecyclerView;
-    private List<String> mList = new ArrayList<String>(
-            Arrays.asList("aaa", "bbb", "ccc", "ddd","eee"));
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_ba_recyclerview);
 
-        mRecyclerView = (RecyclerView)findViewById(R.id.recyclerview);
+
+        mRecyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
-        mRecyclerView.setAdapter(new CommonAdapter<String>(this, R.layout.ba_single, mList) {
-            @Override
-            protected void convert(ViewHolder holder, String item, int position) {
-                holder.setText(R.id.text, item);
-            }
-        });
+        mRecyclerView.setAdapter(new ChatAdapterForRecyclerView(this, ChatMessage.MOCK_DATAS));
 
 
     }

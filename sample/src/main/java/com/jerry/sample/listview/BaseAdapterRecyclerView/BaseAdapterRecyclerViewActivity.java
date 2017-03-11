@@ -58,13 +58,13 @@ public class BaseAdapterRecyclerViewActivity extends Activity {
                 } else if("recyclerview2".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, BARecyclerViewComplex.class, null);
                 } else if("recyclerview3".equals(jumpActivity)){
-                    MyActivityManager.getInstance().startActivity(mContext, BAListViewChat.class, null);
+                    MyActivityManager.getInstance().startActivity(mContext, BARecyclerViewChat.class, null);
                 } else if("recyclerview4".equals(jumpActivity)){
-                    MyActivityManager.getInstance().startActivity(mContext, BAListViewChat.class, null);
+                    MyActivityManager.getInstance().startActivity(mContext, BARecyclerViewHeaderFooter.class, null);
                 } else if("recyclerview5".equals(jumpActivity)){
-                    MyActivityManager.getInstance().startActivity(mContext, BAListViewChat.class, null);
+                    MyActivityManager.getInstance().startActivity(mContext, BARecyclerViewPullToRefresh.class, null);
                 } else if("recyclerview6".equals(jumpActivity)){
-                    MyActivityManager.getInstance().startActivity(mContext, BAListViewChat.class, null);
+                    MyActivityManager.getInstance().startActivity(mContext, BARecyclerViewEmptyView.class, null);
                 }
             }
         });
@@ -95,15 +95,15 @@ public class BaseAdapterRecyclerViewActivity extends Activity {
         ListInfoBean recyclerview4 = new ListInfoBean();
         recyclerview4.setTitle("头部和尾部");
         recyclerview4.setOperate("recyclerview4");
-        mListData.add(recyclerview3);
+        mListData.add(recyclerview4);
 
         ListInfoBean recyclerview5 = new ListInfoBean();
-        recyclerview5.setTitle("加载更多");
+        recyclerview5.setTitle("Pull To Refresh");
         recyclerview5.setOperate("recyclerview5");
         mListData.add(recyclerview5);
 
         ListInfoBean recyclerview6 = new ListInfoBean();
-        recyclerview6.setTitle("加载更多");
+        recyclerview6.setTitle("空视图");
         recyclerview6.setOperate("recyclerview6");
         mListData.add(recyclerview6);
     }
