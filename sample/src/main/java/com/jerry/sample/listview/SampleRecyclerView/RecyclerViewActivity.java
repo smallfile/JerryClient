@@ -18,6 +18,15 @@ import android.widget.Toast;
 
 import com.jerry.sample.R;
 
+
+/**
+ *
+ * 大神的blog
+ *    http://blog.csdn.net/lmj623565791/article/details/45059587
+ *
+ *
+ *
+ */
 public class RecyclerViewActivity extends AppCompatActivity {
 
 	private RecyclerView mRecyclerView;

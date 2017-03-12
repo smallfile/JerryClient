@@ -24,7 +24,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme.ActionBar">
 
         <activity android:name=".MainActivity">
             <intent-filter>
@@ -305,13 +305,11 @@
         <activity
             android:name=".listview.SampleRecyclerView.RecyclerViewActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.ActionBar"/>
+            android:screenOrientation="portrait" />
         <activity
             android:name=".listview.SampleRecyclerView.WaterFallActivity"
             android:configChanges="orientation|keyboardHidden"
-            android:screenOrientation="portrait"
-            android:theme="@style/AppTheme.ActionBar"/>
+            android:screenOrientation="portrait" />
 
         <!--  列表页面　结束   -->
 
