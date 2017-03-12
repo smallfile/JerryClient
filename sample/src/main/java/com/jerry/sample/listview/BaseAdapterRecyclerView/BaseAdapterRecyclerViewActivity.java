@@ -65,6 +65,8 @@ public class BaseAdapterRecyclerViewActivity extends Activity {
                     MyActivityManager.getInstance().startActivity(mContext, BARecyclerViewPullToRefresh.class, null);
                 } else if("recyclerview6".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, BARecyclerViewEmptyView.class, null);
+                } else if("recyclerview7".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, BARecyclerViewSection.class, null);
                 }
             }
         });
@@ -106,6 +108,13 @@ public class BaseAdapterRecyclerViewActivity extends Activity {
         recyclerview6.setTitle("空视图");
         recyclerview6.setOperate("recyclerview6");
         mListData.add(recyclerview6);
+
+        ListInfoBean recyclerview7 = new ListInfoBean();
+        recyclerview7.setTitle("Section布局");
+        recyclerview7.setOperate("recyclerview7");
+        mListData.add(recyclerview7);
+
+
     }
 
 }
