@@ -11,8 +11,8 @@ import com.jerry.sample.ListInfoBean;
 import com.jerry.sample.R;
 import com.jerry.sample.listview.BaseAdapterListView.BaseAdapterListViewActivity;
 import com.jerry.sample.listview.BaseAdapterRecyclerView.BaseAdapterRecyclerViewActivity;
-import com.jerry.sample.listview.pulltorefresh.PullToRefreshActivity;
-import com.jerry.sample.listview.recyclerview.RecyclerViewActivity;
+import com.jerry.sample.listview.ptlListView.PullToRefreshActivity;
+import com.jerry.sample.listview.ptlRecyclerView.RecyclerViewActivity;
 import com.jerry.sample.utils.MyActivityManager;
 
 import java.util.ArrayList;

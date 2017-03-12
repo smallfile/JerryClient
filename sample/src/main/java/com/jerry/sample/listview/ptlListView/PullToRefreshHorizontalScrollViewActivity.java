@@ -13,33 +13,34 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-package com.jerry.sample.listview.pulltorefresh;
+package com.jerry.sample.listview.ptlListView;
 
 import android.app.Activity;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.widget.ScrollView;
+import android.widget.HorizontalScrollView;
 
 import com.jerry.sample.R;
 import com.jerry.uilib.listview.pulltorefresh.PullToRefreshBase;
-import com.jerry.uilib.listview.pulltorefresh.view.PullToRefreshScrollView;
+import com.jerry.uilib.listview.pulltorefresh.view.PullToRefreshHorizontalScrollView;
 
-public final class PullToRefreshScrollViewActivity extends Activity {
 
-	PullToRefreshScrollView mPullRefreshScrollView;
-	ScrollView mScrollView;
+public final class PullToRefreshHorizontalScrollViewActivity extends Activity {
+
+	PullToRefreshHorizontalScrollView mPullRefreshScrollView;
+	HorizontalScrollView mScrollView;
 
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_ptr_scrollview);
+		setContentView(R.layout.activity_ptr_horizontalscrollview);
 
-		mPullRefreshScrollView = (PullToRefreshScrollView) findViewById(R.id.pull_refresh_scrollview);
-		mPullRefreshScrollView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<ScrollView>() {
+		mPullRefreshScrollView = (PullToRefreshHorizontalScrollView) findViewById(R.id.pull_refresh_horizontalscrollview);
+		mPullRefreshScrollView.setOnRefreshListener(new PullToRefreshBase.OnRefreshListener<HorizontalScrollView>() {
 
 			@Override
-			public void onRefresh(PullToRefreshBase<ScrollView> refreshView) {
+			public void onRefresh(PullToRefreshBase<HorizontalScrollView> refreshView) {
 				new GetDataTask().execute();
 			}
 		});

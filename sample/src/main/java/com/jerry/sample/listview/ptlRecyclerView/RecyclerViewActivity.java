@@ -1,4 +1,4 @@
-package com.jerry.sample.listview.recyclerview;
+package com.jerry.sample.listview.ptlRecyclerView;
 
 import android.content.Intent;
 import android.graphics.Color;

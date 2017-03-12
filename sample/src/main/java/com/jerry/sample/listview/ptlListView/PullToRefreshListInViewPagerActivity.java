@@ -1,4 +1,4 @@
-package com.jerry.sample.listview.pulltorefresh;
+package com.jerry.sample.listview.ptlListView;
 
 import android.app.Activity;
 import android.content.Context;

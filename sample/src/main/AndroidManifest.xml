@@ -174,74 +174,74 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".listview.pulltorefresh.PullToRefreshActivity"
+            android:name=".listview.ptlListView.PullToRefreshActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".listview.pulltorefresh.PullToRefreshExpandableListActivity"
+            android:name=".listview.ptlListView.PullToRefreshExpandableListActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".listview.pulltorefresh.PullToRefreshGridActivity"
+            android:name=".listview.ptlListView.PullToRefreshGridActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".listview.pulltorefresh.PullToRefreshHorizontalScrollViewActivity"
+            android:name=".listview.ptlListView.PullToRefreshHorizontalScrollViewActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".listview.pulltorefresh.PullToRefreshListActivity"
+            android:name=".listview.ptlListView.PullToRefreshListActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".listview.pulltorefresh.PullToRefreshListFragmentActivity"
+            android:name=".listview.ptlListView.PullToRefreshListFragmentActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".listview.pulltorefresh.PullToRefreshListInViewPagerActivity"
+            android:name=".listview.ptlListView.PullToRefreshListInViewPagerActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".listview.pulltorefresh.PullToRefreshScrollViewActivity"
+            android:name=".listview.ptlListView.PullToRefreshScrollViewActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".listview.pulltorefresh.PullToRefreshViewPagerActivity"
+            android:name=".listview.ptlListView.PullToRefreshViewPagerActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".listview.pulltorefresh.PullToRefreshWebView2Activity"
+            android:name=".listview.ptlListView.PullToRefreshWebView2Activity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".listview.pulltorefresh.PullToRefreshWebViewActivity"
+            android:name=".listview.ptlListView.PullToRefreshWebViewActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".listview.recyclerview.RecyclerViewActivity"
+            android:name=".listview.ptlRecyclerView.RecyclerViewActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".listview.recyclerview.PullAndPushActivity"
+            android:name=".listview.ptlRecyclerView.PullAndPushActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".listview.recyclerview.LoadImageActivity"
+            android:name=".listview.ptlRecyclerView.LoadImageActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"/>
         <activity
-            android:name=".listview.recyclerview.SwipeMenuActivity"
+            android:name=".listview.ptlRecyclerView.SwipeMenuActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"/>
 

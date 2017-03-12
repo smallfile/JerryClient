@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  *******************************************************************************/
-package com.jerry.sample.listview.pulltorefresh;
+package com.jerry.sample.listview.ptlListView;
 
 import android.app.Activity;
 import android.os.AsyncTask;
