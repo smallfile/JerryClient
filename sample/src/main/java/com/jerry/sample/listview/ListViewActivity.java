@@ -11,8 +11,9 @@ import com.jerry.sample.ListInfoBean;
 import com.jerry.sample.R;
 import com.jerry.sample.listview.BaseAdapterListView.BaseAdapterListViewActivity;
 import com.jerry.sample.listview.BaseAdapterRecyclerView.BaseAdapterRecyclerViewActivity;
+import com.jerry.sample.listview.SampleRecyclerView.RecyclerViewActivity;
 import com.jerry.sample.listview.ptlListView.PullToRefreshActivity;
-import com.jerry.sample.listview.ptlRecyclerView.RecyclerViewActivity;
+import com.jerry.sample.listview.ptlRecyclerView.PullToRefreshRecyclerViewActivity;
 import com.jerry.sample.utils.MyActivityManager;
 
 import java.util.ArrayList;
@@ -50,11 +51,13 @@ public class ListViewActivity extends Activity {
                 if("ListViewPtr".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, PullToRefreshActivity.class, null);
                 } else if("RecyclerViewPtr".equals(jumpActivity)){
-                    MyActivityManager.getInstance().startActivity(mContext, RecyclerViewActivity.class, null);
+                    MyActivityManager.getInstance().startActivity(mContext, PullToRefreshRecyclerViewActivity.class, null);
                 } else if("baseAdapterListView".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, BaseAdapterListViewActivity.class, null);
                 } else if("baseAdapterRecyclerView".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, BaseAdapterRecyclerViewActivity.class, null);
+                } else if("recyclerViewSample".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, RecyclerViewActivity.class, null);
                 }
             }
         });
@@ -81,6 +84,12 @@ public class ListViewActivity extends Activity {
         baseAdapterRecyclerView.setTitle("快速开发RecyclerView");
         baseAdapterRecyclerView.setOperate("baseAdapterRecyclerView");
         mListData.add(baseAdapterRecyclerView);
+
+        ListInfoBean recyclerViewSample = new ListInfoBean();
+        recyclerViewSample.setTitle("RecyclerView实例");
+        recyclerViewSample.setOperate("recyclerViewSample");
+        mListData.add(recyclerViewSample);
+
 
     }
 

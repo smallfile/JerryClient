@@ -51,6 +51,8 @@ public class MainActivity extends Activity {
                     MyActivityManager.getInstance().startActivity(mContext, ListViewActivity.class, null);
                 } else if("Widget".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, WidgetActivity.class, null);
+                }  else if("materialDesign".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, WidgetActivity.class, null);
                 }
 
 
@@ -78,11 +80,10 @@ public class MainActivity extends Activity {
         widget.setOperate("Widget");
         mListData.add(widget);
 
-        ListInfoBean utils = new ListInfoBean();
-        utils.setTitle("工具类");
-        utils.setSubTitle("常用的工具");
-        utils.setOperate("Utils");
-        mListData.add(utils);
+        ListInfoBean materialDesign = new ListInfoBean();
+        materialDesign.setTitle("Material Design");
+        materialDesign.setOperate("materialDesign");
+        mListData.add(materialDesign);
 
 
 

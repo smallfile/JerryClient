@@ -229,7 +229,7 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
-            android:name=".listview.ptlRecyclerView.RecyclerViewActivity"
+            android:name=".listview.ptlRecyclerView.PullToRefreshRecyclerViewActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"/>
         <activity
@@ -302,6 +302,16 @@
             android:name=".listview.BaseAdapterRecyclerView.BARecyclerViewSection"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait"/>
+        <activity
+            android:name=".listview.SampleRecyclerView.RecyclerViewActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.ActionBar"/>
+        <activity
+            android:name=".listview.SampleRecyclerView.WaterFallActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.ActionBar"/>
 
         <!--  列表页面　结束   -->
 

@@ -11,4 +11,8 @@
     <color name="tab_top2_text_1">#000</color>
     <color name="tab_top2_text_2">#fff</color>
 
+
+    <color name="recyclerview_item_press">#ffff0000</color>
+    <color name="recyclerview_item_normal">#44ff0000</color>
+
 </resources>

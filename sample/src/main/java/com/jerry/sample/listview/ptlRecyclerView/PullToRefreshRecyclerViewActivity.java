@@ -9,7 +9,7 @@ import android.view.View;
 
 import com.jerry.sample.R;
 
-public class RecyclerViewActivity extends AppCompatActivity {
+public class PullToRefreshRecyclerViewActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,7 +18,7 @@ public class RecyclerViewActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         toolbar.setLogo(R.mipmap.ic_launcher);
-        toolbar.setTitle("RecyclerViewActivity");
+        toolbar.setTitle("PullToRefreshRecyclerViewActivity");
         toolbar.setTitleTextColor(Color.WHITE);
         toolbar.setSubtitle("Sub title");
         setSupportActionBar(toolbar);
