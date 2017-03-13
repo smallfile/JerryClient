@@ -454,6 +454,11 @@
             android:screenOrientation="portrait"
             android:theme="@style/AiTheme.Light">
         </activity>
+        <activity
+            android:name=".widget.MaterialCircleProgressBarActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait">
+        </activity>
         <!--  自定义控件页面　开始   -->
 
     </application>

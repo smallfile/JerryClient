@@ -82,6 +82,8 @@ public class WidgetActivity extends Activity {
                     MyActivityManager.getInstance().startActivity(mContext, CalendarActivity.class, null);
                 } else  if("calendar2".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, Calendar2Activity.class, null);
+                } else  if("materialCircleProgressBar".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, MaterialCircleProgressBarActivity.class, null);
                 }
             }
         });
@@ -169,7 +171,10 @@ public class WidgetActivity extends Activity {
         calendar2.setOperate("calendar2");
         mListData.add(calendar2);
 
-
+        ListInfoBean materialCircleProgressBar = new ListInfoBean();
+        materialCircleProgressBar.setTitle("Material Circle ProgressBar");
+        materialCircleProgressBar.setOperate("materialCircleProgressBar");
+        mListData.add(materialCircleProgressBar);
     }
 
 }
