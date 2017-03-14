@@ -459,6 +459,11 @@
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait">
         </activity>
+        <activity
+            android:name=".widget.JDCategory.JDCategoryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait">
+        </activity>
         <!--  自定义控件页面　开始   -->
 
     </application>

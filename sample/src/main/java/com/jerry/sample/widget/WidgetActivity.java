@@ -11,6 +11,7 @@ import com.jerry.sample.ListInfoAdapter;
 import com.jerry.sample.ListInfoBean;
 import com.jerry.sample.R;
 import com.jerry.sample.utils.MyActivityManager;
+import com.jerry.sample.widget.JDCategory.JDCategoryActivity;
 import com.jerry.sample.widget.banner.BannerActivity;
 import com.jerry.sample.widget.calendar.Calendar2Activity;
 import com.jerry.sample.widget.calendar.CalendarActivity;
@@ -84,6 +85,8 @@ public class WidgetActivity extends Activity {
                     MyActivityManager.getInstance().startActivity(mContext, Calendar2Activity.class, null);
                 } else  if("materialCircleProgressBar".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, MaterialCircleProgressBarActivity.class, null);
+                } else  if("jdCategory".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, JDCategoryActivity.class, null);
                 }
             }
         });
@@ -175,6 +178,11 @@ public class WidgetActivity extends Activity {
         materialCircleProgressBar.setTitle("Material Circle ProgressBar");
         materialCircleProgressBar.setOperate("materialCircleProgressBar");
         mListData.add(materialCircleProgressBar);
+
+        ListInfoBean jdCategory = new ListInfoBean();
+        jdCategory.setTitle("仿京东分类");
+        jdCategory.setOperate("jdCategory");
+        mListData.add(jdCategory);
     }
 
 }
