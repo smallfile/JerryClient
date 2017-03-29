@@ -11,6 +11,7 @@ import com.jerry.sample.ListInfoAdapter;
 import com.jerry.sample.ListInfoBean;
 import com.jerry.sample.R;
 import com.jerry.sample.frame.album.AlbumBucketActivity;
+import com.jerry.sample.frame.eventbus.EventBusActivity;
 import com.jerry.sample.frame.litepal.LitePalActivity;
 import com.jerry.sample.frame.okhttp.OkHttpActivity;
 import com.jerry.sample.frame.tab.TabActivity;
@@ -66,6 +67,8 @@ public class FrameActivity extends Activity {
                     MyActivityManager.getInstance().startActivity(mContext, OkHttpActivity.class, null);
                 } else  if("permission".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, PermissionActivity.class, null);
+                } else  if("eventbus".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, EventBusActivity.class, null);
                 }
             }
         });
@@ -113,6 +116,10 @@ public class FrameActivity extends Activity {
         permission.setOperate("permission");
         mListData.add(permission);
 
+        ListInfoBean eventbus = new ListInfoBean();
+        eventbus.setTitle("EventBus实例");
+        eventbus.setOperate("eventbus");
+        mListData.add(eventbus);
 
     }
 
