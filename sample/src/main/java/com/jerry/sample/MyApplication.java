@@ -16,11 +16,14 @@ import com.jerry.uilib.frame.okhttp.utils.HttpsUtils;
 
 import com.jerry.uilib.frame.okhttp.utils.LoggerInterceptor;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.concurrent.TimeUnit;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLSession;
 
 import okhttp3.OkHttpClient;
+import okio.Buffer;
 
 public class MyApplication extends Application {
 
@@ -90,6 +93,7 @@ public class MyApplication extends Application {
 //                //其他配置
 //                .build();
 //        OkHttpUtils.initClient(okHttpClient);
+
 //        设置具体的证书
 //        HttpsUtils.SSLParams sslParams = HttpsUtils.getSslSocketFactory(证书的inputstream, null, null);
 //        OkHttpClient okHttpClient = new OkHttpClient.Builder()
@@ -97,13 +101,26 @@ public class MyApplication extends Application {
 //                //其他配置
 //                .build();
 //        OkHttpUtils.initClient(okHttpClient);
+
 //        双向认证
 //        HttpsUtils.getSslSocketFactory(
 //                证书的inputstream,
 //                本地证书的inputstream,
 //                本地证书的密码)
-        HttpsUtils.SSLParams sslParams = HttpsUtils.getSslSocketFactory(null, null, null);
 
+//        1. 设置可访问所有的https网站
+        HttpsUtils.SSLParams sslParams = HttpsUtils.getSslSocketFactory(null, null, null);
+//        2. 以证书字符串的方式访问12306网站
+//        InputStream[] cerInputStreams = {new Buffer().writeUtf8(CER_12306).inputStream()};
+//        HttpsUtils.SSLParams sslParams = HttpsUtils.getSslSocketFactory(cerInputStreams, null, null);
+//        3. 以证书的方式访问12306网站
+//        HttpsUtils.SSLParams sslParams = null;
+//        try {
+//            InputStream[] cerInputStreams = {getAssets().open("cer12306.cer")};
+//            sslParams = HttpsUtils.getSslSocketFactory(cerInputStreams, null, null);
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
         OkHttpClient okHttpClient = new OkHttpClient.Builder()
                 .connectTimeout(10000L, TimeUnit.MILLISECONDS)
                 .readTimeout(10000L, TimeUnit.MILLISECONDS)
