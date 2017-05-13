@@ -69,6 +69,8 @@ public class FrameActivity extends Activity {
                     MyActivityManager.getInstance().startActivity(mContext, PermissionActivity.class, null);
                 } else  if("eventbus".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, EventBusActivity.class, null);
+                } else  if("glide".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, GlideActivity.class, null);
                 }
             }
         });
@@ -120,6 +122,11 @@ public class FrameActivity extends Activity {
         eventbus.setTitle("EventBus实例");
         eventbus.setOperate("eventbus");
         mListData.add(eventbus);
+
+        ListInfoBean glide = new ListInfoBean();
+        glide.setTitle("Glide实例");
+        glide.setOperate("glide");
+        mListData.add(glide);
 
     }
 

@@ -169,6 +169,11 @@
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" >
         </activity>
+        <activity
+            android:name=".frame.GlideActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+        </activity>
         <!--  框架页面　开始   -->
 
 
