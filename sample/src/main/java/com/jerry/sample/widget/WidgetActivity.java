@@ -63,6 +63,8 @@ public class WidgetActivity extends Activity {
                     MyActivityManager.getInstance().startActivity(mContext, MyListViewActivity.class, null);
                 } else  if("rounded_image".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, RoundedImageActivity.class, null);
+                }  else  if("circle_image".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, CircleImageActivity.class, null);
                 } else  if("uitableview".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, UITableViewActivity.class, null);
                 } else  if("password".equals(jumpActivity)){
@@ -120,9 +122,14 @@ public class WidgetActivity extends Activity {
         mListData.add(myListView);
 
         ListInfoBean roundedImage = new ListInfoBean();
-        roundedImage.setTitle("圆形图片控件");
+        roundedImage.setTitle("圆形图片控件1");
         roundedImage.setOperate("rounded_image");
         mListData.add(roundedImage);
+
+        ListInfoBean roundedImage2 = new ListInfoBean();
+        roundedImage2.setTitle("圆形图片控件2");
+        roundedImage2.setOperate("circle_image");
+        mListData.add(roundedImage2);
 
         ListInfoBean uitableview = new ListInfoBean();
         uitableview.setTitle("UI Table View");

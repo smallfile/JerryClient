@@ -355,6 +355,11 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
+            android:name=".widget.CircleImageActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
             android:name=".widget.UITableViewActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" >
