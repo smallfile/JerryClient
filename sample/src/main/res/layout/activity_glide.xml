@@ -56,10 +56,10 @@
         </Button>
 
         <Button
-            android:id="@+id/view_target_btn"
+            android:id="@+id/exception_btn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="ViewTarget显示"
+            android:text="Exception显示"
             >
         </Button>
 

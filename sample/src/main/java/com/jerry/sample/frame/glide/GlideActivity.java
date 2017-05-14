@@ -11,12 +11,15 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.bumptech.glide.Glide;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
 import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.RequestListener;
 import com.bumptech.glide.request.animation.GlideAnimation;
 import com.bumptech.glide.request.target.SimpleTarget;
+import com.bumptech.glide.request.target.Target;
 import com.bumptech.glide.request.target.ViewTarget;
 import com.jerry.sample.R;
 
@@ -29,9 +32,9 @@ public class GlideActivity extends Activity {
     private Button mCacheBtn;
     private Button mThumbnailBtn;
     private Button mSimpleTargetBtn;
-    private Button mViewTargetBtn;
+    private Button mExceptionBtn;
 
-    private String imageUrl = "https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/image/h%3D220/sign=55691eb096510fb367197095e932c893/a8014c086e061d95b9df673173f40ad162d9ca1a.jpg";
+    private String imageUrl = "https://ss0.baidu66.com/-Po3dSag_xI4khGko9WTAnF6hhy/image/h%3D220/sign=55691eb096510fb367197095e932c893/a8014c086e061d95b9df673173f40ad162d9ca1a.jpg";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,7 +53,7 @@ public class GlideActivity extends Activity {
         mCacheBtn = (Button)findViewById(R.id.cache_btn);
         mThumbnailBtn = (Button)findViewById(R.id.thumbnail_btn);
         mSimpleTargetBtn = (Button)findViewById(R.id.simple_target_btn);
-        mViewTargetBtn = (Button)findViewById(R.id.view_target_btn);
+        mExceptionBtn = (Button)findViewById(R.id.exception_btn);
     }
 
     private void initData(){
@@ -84,10 +87,10 @@ public class GlideActivity extends Activity {
                 simpleTargetClick();
             }
         });
-        mViewTargetBtn.setOnClickListener(new View.OnClickListener() {
+        mExceptionBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
+                exceptionClick();
             }
         });
     }
@@ -183,7 +186,31 @@ public class GlideActivity extends Activity {
 
     }
 
+    private RequestListener<String, Bitmap> requestListener = new RequestListener<String, Bitmap>() {
+        @Override
+        public boolean onException(Exception e, String model, Target<Bitmap> target, boolean isFirstResource) {
+            Toast.makeText(GlideActivity.this, "发生异常!", Toast.LENGTH_SHORT).show();
 
+            // important to return false so the error placeholder can be placed
+            return false;
+        }
+
+        @Override
+        public boolean onResourceReady(Bitmap resource, String model, Target<Bitmap> target, boolean isFromMemoryCache, boolean isFirstResource) {
+            return false;
+        }
+    };
+
+    private void exceptionClick(){
+        Glide.with(mContext.getApplicationContext())
+                .load(imageUrl)      //图片加载路径
+                .asBitmap()
+                .placeholder(R.drawable.test_image)    //等待占位符
+                .error(R.mipmap.ic_launcher)   //错误占位符
+                .listener(requestListener)
+                .into(mImageView);
+
+    }
 
 
 
