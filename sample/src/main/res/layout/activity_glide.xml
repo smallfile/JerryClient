@@ -1,15 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:custom="http://schemas.android.com/apk/res-auto"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
-    
-    <ImageView
-        android:id="@+id/image"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
 
-</RelativeLayout>
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+         <Button
+             android:id="@+id/normal_btn"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content"
+             android:text="普通显示"
+             >
+         </Button>
+
+        <Button
+            android:id="@+id/gif_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="gif显示"
+            >
+        </Button>
+
+        <Button
+            android:id="@+id/cache_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="缓存显示"
+            >
+        </Button>
+
+        <Button
+            android:id="@+id/thumbnail_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="缩略图显示"
+            >
+        </Button>
+
+
+
+
+    </LinearLayout>
+</ScrollView>
