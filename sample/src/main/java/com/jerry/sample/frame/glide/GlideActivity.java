@@ -1,31 +1,24 @@
-package com.jerry.sample.frame;
+package com.jerry.sample.frame.glide;
 
 import android.app.Activity;
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
+import android.util.AttributeSet;
 import android.view.View;
-import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.ListView;
+import android.widget.LinearLayout;
+import android.widget.TextView;
 
 import com.bumptech.glide.Glide;
-import com.bumptech.glide.Priority;
 import com.bumptech.glide.load.engine.DiskCacheStrategy;
-import com.jerry.sample.ListInfoAdapter;
-import com.jerry.sample.ListInfoBean;
+import com.bumptech.glide.load.resource.drawable.GlideDrawable;
+import com.bumptech.glide.request.animation.GlideAnimation;
+import com.bumptech.glide.request.target.SimpleTarget;
+import com.bumptech.glide.request.target.ViewTarget;
 import com.jerry.sample.R;
-import com.jerry.sample.frame.album.AlbumBucketActivity;
-import com.jerry.sample.frame.eventbus.EventBusActivity;
-import com.jerry.sample.frame.litepal.LitePalActivity;
-import com.jerry.sample.frame.okhttp.OkHttpActivity;
-import com.jerry.sample.frame.tab.TabActivity;
-import com.jerry.sample.frame.wxalbum.WXAlbumActivity;
-import com.jerry.sample.frame.xutils.XUtilsActivity;
-import com.jerry.sample.utils.MyActivityManager;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class GlideActivity extends Activity {
 
@@ -35,6 +28,8 @@ public class GlideActivity extends Activity {
     private Button mGifBtn;
     private Button mCacheBtn;
     private Button mThumbnailBtn;
+    private Button mSimpleTargetBtn;
+    private Button mViewTargetBtn;
 
     private String imageUrl = "https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/image/h%3D220/sign=55691eb096510fb367197095e932c893/a8014c086e061d95b9df673173f40ad162d9ca1a.jpg";
 
@@ -54,6 +49,8 @@ public class GlideActivity extends Activity {
         mGifBtn = (Button)findViewById(R.id.gif_btn);
         mCacheBtn = (Button)findViewById(R.id.cache_btn);
         mThumbnailBtn = (Button)findViewById(R.id.thumbnail_btn);
+        mSimpleTargetBtn = (Button)findViewById(R.id.simple_target_btn);
+        mViewTargetBtn = (Button)findViewById(R.id.view_target_btn);
     }
 
     private void initData(){
@@ -81,7 +78,18 @@ public class GlideActivity extends Activity {
                 thumbnailClick();
             }
         });
+        mSimpleTargetBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                simpleTargetClick();
+            }
+        });
+        mViewTargetBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
 
+            }
+        });
     }
 
     private void normalClick(){
@@ -101,7 +109,7 @@ public class GlideActivity extends Activity {
 //                .centerCrop()         //缩放图像让它填充到 ImageView 界限内并且裁剪额外的部分。ImageView 可能会完全填充，但图像可能不会完整显示。
 //                .fitCenter()       //缩放图像让图像都测量出来等于或小于 ImageView 的边界范围。该图像将会完全显示，但可能不会填满整个 ImageView。
 //                .priority(Priority.HIGH)   //优先级　　按照递增关系 Priority.LOW < Priority.NORMAL < Priority.HIGH < Priority.IMMEDIATE
-                .into(mImageView);     //图片显示到对应的 ImageView 中
+                .into(mImageView);     //图片显示到对应的 ImageView 中.  into()传一个 ImageView 作为参数，Glide 将会用 ImageView 的大小去限制图像的大小。
 
 
     }
@@ -149,6 +157,33 @@ public class GlideActivity extends Activity {
 //                .thumbnail(thumbnailRequest)
                 .into(mImageView);     //图片显示到对应的 ImageView 中
     }
+
+    /**
+     * Glide 提供了一个用 Targets 的简单的方式去接受图片资源的 Bitmap。
+     * 添加了 .asBitmap()，它强制 Glide 去返回一个 Bitmap 对象。原因：Glide 也可以加载 Gif 或 video 的。为了返回一个Bitmap，我们可以调用 .asBitmap() 告诉 Glide 我们需要一个图像。
+     */
+    private void simpleTargetClick(){
+        Glide.with(mContext.getApplicationContext())
+                .load(imageUrl)      //图片加载路径
+                .asBitmap()
+                .placeholder(R.drawable.test_image)    //等待占位符
+                .error(R.mipmap.ic_launcher)   //错误占位符
+//                .into(new SimpleTarget<Bitmap>() {  //不指定大小
+//                    @Override
+//                    public void onResourceReady(Bitmap bitmap, GlideAnimation<? super Bitmap> glideAnimation) {
+//                        mImageView.setImageBitmap(bitmap);
+//                    }
+//                });
+                .into(new SimpleTarget<Bitmap>(30, 30) {  //指定大小
+                    @Override
+                    public void onResourceReady(Bitmap bitmap, GlideAnimation<? super Bitmap> glideAnimation) {
+                        mImageView.setImageBitmap(bitmap);
+                    }
+                });
+
+    }
+
+
 
 
 

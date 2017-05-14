@@ -12,6 +12,7 @@ import com.jerry.sample.ListInfoBean;
 import com.jerry.sample.R;
 import com.jerry.sample.frame.album.AlbumBucketActivity;
 import com.jerry.sample.frame.eventbus.EventBusActivity;
+import com.jerry.sample.frame.glide.GlideActivity;
 import com.jerry.sample.frame.litepal.LitePalActivity;
 import com.jerry.sample.frame.okhttp.OkHttpActivity;
 import com.jerry.sample.frame.tab.TabActivity;
