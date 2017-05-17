@@ -2,10 +2,9 @@ package com.jerry.sample;
 
 import android.app.Application;
 import android.content.Context;
+import android.util.Log;
 
 import org.litepal.LitePal;
-import org.xutils.BuildConfig;
-import org.xutils.x;
 import com.android.volley.cache.DiskLruBasedCache;
 import com.android.volley.cache.plus.SimpleImageLoader;
 import com.jerry.sample.utils.CrashHandler;
@@ -15,9 +14,15 @@ import com.jerry.uilib.frame.okhttp.cookie.store.MemoryCookieStore;
 import com.jerry.uilib.frame.okhttp.utils.HttpsUtils;
 
 import com.jerry.uilib.frame.okhttp.utils.LoggerInterceptor;
+import com.liulishuo.filedownloader.FileDownloader;
+import com.liulishuo.filedownloader.connection.FileDownloadUrlConnection;
+import com.liulishuo.filedownloader.services.DownloadMgrInitialParams;
+import com.liulishuo.filedownloader.util.FileDownloadLog;
+import com.liulishuo.filedownloader.util.FileDownloadUtils;
 
 import java.io.IOException;
 import java.io.InputStream;
+import java.net.Proxy;
 import java.util.concurrent.TimeUnit;
 import javax.net.ssl.HostnameVerifier;
 import javax.net.ssl.SSLSession;
@@ -49,18 +54,18 @@ public class MyApplication extends Application {
         //初例化未捕获异常监听器
 //        CrashHandler.getInstance().init(getApplicationContext());
 
-        //XUtils初使化
-        x.Ext.init(this);
-        x.Ext.setDebug(BuildConfig.DEBUG); // 开启debug会影响性能
-
         DiskLruBasedCache.ImageCacheParams cacheParams = new DiskLruBasedCache.ImageCacheParams(getApplicationContext(), "gzCache");
         cacheParams.setMemCacheSizePercent(0.5f);
         mImageLoader = new SimpleImageLoader(getApplicationContext(),cacheParams);
 
         //LitePal初使化
         LitePal.initialize(this);
+
         //OKHttp工具类初使化
         initOkHttpClient();
+
+        //文件下载器初使化
+        initFileDownload();
     }
 
     private String CER_12306 = "-----BEGIN CERTIFICATE-----\n" +
@@ -142,5 +147,24 @@ public class MyApplication extends Application {
     public SimpleImageLoader getmImageLoader() {
         return mImageLoader;
     }
+
+    private void initFileDownload(){
+        /**
+         * just for cache Application's Context, and ':filedownloader' progress will NOT be launched
+         * by below code, so please do not worry about performance.
+         * @see FileDownloader#init(Context)
+         */
+        FileDownloader.init(getApplicationContext(), new DownloadMgrInitialParams.InitCustomMaker()
+                .connectionCreator(new FileDownloadUrlConnection
+                        .Creator(new FileDownloadUrlConnection.Configuration()
+                        .connectTimeout(15_000) // set connection timeout.
+                        .readTimeout(15_000) // set read timeout.
+                        .proxy(Proxy.NO_PROXY) // set proxy
+                )));
+
+    }
+
+
+
 
 }

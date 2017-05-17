@@ -10,16 +10,11 @@ import android.widget.ListView;
 import com.jerry.sample.ListInfoAdapter;
 import com.jerry.sample.ListInfoBean;
 import com.jerry.sample.R;
-import com.jerry.sample.frame.CrashActivity;
-import com.jerry.sample.frame.album.AlbumBucketActivity;
-import com.jerry.sample.frame.litepal.LitePalActivity;
-import com.jerry.sample.frame.okhttp.OkHttpActivity;
 import com.jerry.sample.frame.tab.fpa.TabFPAActivity;
 import com.jerry.sample.frame.tab.fragment.TabFragmentActivity;
 import com.jerry.sample.frame.tab.indicator.TabIndicatorActivity;
 import com.jerry.sample.frame.tab.tabhost.TabHostActivity;
 import com.jerry.sample.frame.tab.viewpager.TabViewPagerActivity;
-import com.jerry.sample.frame.xutils.XUtilsActivity;
 import com.jerry.sample.utils.MyActivityManager;
 
 import java.util.ArrayList;

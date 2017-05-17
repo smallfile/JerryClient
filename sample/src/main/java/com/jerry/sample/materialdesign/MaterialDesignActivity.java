@@ -10,7 +10,6 @@ import android.widget.ListView;
 import com.jerry.sample.ListInfoAdapter;
 import com.jerry.sample.ListInfoBean;
 import com.jerry.sample.R;
-import com.jerry.sample.frame.xutils.XUtilsActivity;
 import com.jerry.sample.utils.MyActivityManager;
 
 import java.util.ArrayList;
@@ -46,7 +45,7 @@ public class MaterialDesignActivity extends Activity {
                 ListInfoBean infoBean = mListData.get(position);
                 String jumpActivity = infoBean.getOperate();
                 if("xutils".equals(jumpActivity)){
-                    MyActivityManager.getInstance().startActivity(mContext, XUtilsActivity.class, null);
+//                    MyActivityManager.getInstance().startActivity(mContext, XUtilsActivity.class, null);
                 }
             }
         });

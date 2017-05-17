@@ -10,6 +10,7 @@ import android.widget.ListView;
 import com.jerry.sample.ListInfoAdapter;
 import com.jerry.sample.ListInfoBean;
 import com.jerry.sample.R;
+import com.jerry.sample.frame.FileDownload.FileDownloadMainActivity;
 import com.jerry.sample.frame.album.AlbumBucketActivity;
 import com.jerry.sample.frame.eventbus.EventBusActivity;
 import com.jerry.sample.frame.glide.GlideActivity;
@@ -17,7 +18,6 @@ import com.jerry.sample.frame.litepal.LitePalActivity;
 import com.jerry.sample.frame.okhttp.OkHttpActivity;
 import com.jerry.sample.frame.tab.TabActivity;
 import com.jerry.sample.frame.wxalbum.WXAlbumActivity;
-import com.jerry.sample.frame.xutils.XUtilsActivity;
 import com.jerry.sample.utils.MyActivityManager;
 
 import java.util.ArrayList;
@@ -52,9 +52,7 @@ public class FrameActivity extends Activity {
             public void onItemClick(AdapterView<?> adapterView, View view, int position, long rowId) {
                 ListInfoBean infoBean = mListData.get(position);
                 String jumpActivity = infoBean.getOperate();
-                if("xutils".equals(jumpActivity)){
-                    MyActivityManager.getInstance().startActivity(mContext, XUtilsActivity.class, null);
-                } else  if("tab".equals(jumpActivity)){
+                if("tab".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, TabActivity.class, null);
                 } else  if("album".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, AlbumBucketActivity.class, null);
@@ -72,17 +70,14 @@ public class FrameActivity extends Activity {
                     MyActivityManager.getInstance().startActivity(mContext, EventBusActivity.class, null);
                 } else  if("glide".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, GlideActivity.class, null);
+                } else  if("fileDownload".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, FileDownloadMainActivity.class, null);
                 }
             }
         });
     }
 
     private void initData(){
-
-        ListInfoBean xutils = new ListInfoBean();
-        xutils.setTitle("XUtils框架");
-        xutils.setOperate("xutils");
-        mListData.add(xutils);
 
         ListInfoBean tab = new ListInfoBean();
         tab.setTitle("Tab框架");
@@ -128,6 +123,13 @@ public class FrameActivity extends Activity {
         glide.setTitle("Glide实例");
         glide.setOperate("glide");
         mListData.add(glide);
+
+        ListInfoBean fileDownload = new ListInfoBean();
+        fileDownload.setTitle("FileDownload实例");
+        fileDownload.setOperate("fileDownload");
+        mListData.add(fileDownload);
+
+
 
     }
 
