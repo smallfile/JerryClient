@@ -20,6 +20,14 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+    sourceSets {
+        main {
+            resources.srcDirs = ['src']
+            assets.srcDirs = ['assets']    //指定assets目录
+            jniLibs.srcDir 'libs'
+        }
+    }
 }
 
 dependencies {
@@ -40,6 +48,9 @@ dependencies {
 
     //litepal数据库
     compile 'org.litepal.android:core:1.4.1'
+    //ormlite数据库
+    compile files('libs/ormlite-core-4.48.jar')
+    compile files('libs/ormlite-android-4.48.jar')
 
     compile 'com.google.code.gson:gson:2.3.1'
     compile 'com.yqritc:recyclerview-flexibledivider:1.4.0'

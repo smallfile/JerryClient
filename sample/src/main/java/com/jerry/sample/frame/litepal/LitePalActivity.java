@@ -103,25 +103,25 @@ public class LitePalActivity extends Activity {
 
     private void initData(){
 
-        ListInfoBean xutils = new ListInfoBean();
-        xutils.setTitle("增加");
-        xutils.setOperate("insert");
-        mListData.add(xutils);
+        ListInfoBean insert = new ListInfoBean();
+        insert.setTitle("增加");
+        insert.setOperate("insert");
+        mListData.add(insert);
 
-        ListInfoBean tab = new ListInfoBean();
-        tab.setTitle("修改");
-        tab.setOperate("update");
-        mListData.add(tab);
+        ListInfoBean update = new ListInfoBean();
+        update.setTitle("修改");
+        update.setOperate("update");
+        mListData.add(update);
 
-        ListInfoBean album = new ListInfoBean();
-        album.setTitle("删除");
-        album.setOperate("delete");
-        mListData.add(album);
+        ListInfoBean delete = new ListInfoBean();
+        delete.setTitle("删除");
+        delete.setOperate("delete");
+        mListData.add(delete);
 
-        ListInfoBean crash = new ListInfoBean();
-        crash.setTitle("查找");
-        crash.setOperate("search");
-        mListData.add(crash);
+        ListInfoBean search = new ListInfoBean();
+        search.setTitle("查找");
+        search.setOperate("search");
+        mListData.add(search);
 
     }
 

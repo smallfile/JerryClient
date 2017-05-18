@@ -140,6 +140,11 @@
             android:screenOrientation="portrait" >
         </activity>
         <activity
+            android:name=".frame.ormlite.OrmLiteActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
             android:name=".frame.okhttp.OkHttpActivity"
             android:configChanges="orientation|keyboardHidden"
             android:screenOrientation="portrait" >
