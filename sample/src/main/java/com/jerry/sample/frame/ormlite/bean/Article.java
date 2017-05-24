@@ -8,8 +8,10 @@ public class Article {
 
 	@DatabaseField(generatedId = true)
 	private int id;
+
 	@DatabaseField
 	private String title;
+
 	//canBeNull -表示不能为null；foreign=true表示是一个外键;columnName 列名
 	@DatabaseField(canBeNull = true, foreign = true, columnName = "user_id", foreignAutoRefresh = true)
 	private User user;

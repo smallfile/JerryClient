@@ -87,6 +87,9 @@ public class OrmLiteActivity extends Activity {
                 } else  if("articleGetAll".equals(operate)){
                     ArticleManager.getInstance().getArticleList();
 
+                } else  if("articleGetByUserId".equals(operate)){
+                    ArticleManager.getInstance().getArticleListByUserId();
+
                 }
             }
         });
@@ -153,6 +156,11 @@ public class OrmLiteActivity extends Activity {
         articleGetAll.setTitle("查找所有文章");
         articleGetAll.setOperate("articleGetAll");
         mListData.add(articleGetAll);
+
+        ListInfoBean articleGetByUserId = new ListInfoBean();
+        articleGetByUserId.setTitle("通过用户id,查找用户下的所有文章");
+        articleGetByUserId.setOperate("articleGetByUserId");
+        mListData.add(articleGetByUserId);
 
     }
 

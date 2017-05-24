@@ -91,7 +91,30 @@ public class ArticleManager {
         List<Article> articleList = articleDao.getAll();
         for (Article article: articleList) {
             System.out.println("ArticleManager===getArticleList==="+article.getTitle()
-                    +"==="+article.getUser().getName()+"==="+article.getUser().getDesc());
+                    +"==="+article.getUser().getId()
+                    +"==="+article.getUser().getName()
+                    +"==="+article.getUser().getDesc());
+        }
+
+        return null;
+    }
+
+    public List<Article> getArticleListByUserId(){
+        List<Article> articleList = new ArrayList<Article>();
+        User user = new User("张鸿洋1", "Androd技术大牛");
+        userDao.add(user);
+        Article article1 = new Article("技术1", user);
+        articleList.add(article1);
+        Article article2 = new Article("技术2", user);
+        articleList.add(article2);
+        articleDao.addAll(articleList);
+
+        List<Article> articleList2 = articleDao.getArticlesByUserId(user.getId());
+        for (Article article: articleList2) {
+            System.out.println("ArticleManager===getArticleListByUserId==="+article.getTitle()
+                    +"==="+article.getUser().getId()
+                    +"==="+article.getUser().getName()
+                    +"==="+article.getUser().getDesc());
         }
 
         return null;

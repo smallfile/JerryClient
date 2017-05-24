@@ -10,6 +10,7 @@ import android.content.Context;
 import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.misc.TransactionManager;
 import com.jerry.sample.frame.ormlite.DatabaseHelper;
+import com.jerry.sample.frame.ormlite.bean.Article;
 import com.jerry.sample.frame.ormlite.bean.User;
 
 public class UserDao {

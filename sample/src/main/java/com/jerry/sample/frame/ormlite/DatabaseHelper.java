@@ -12,7 +12,6 @@ import com.j256.ormlite.dao.Dao;
 import com.j256.ormlite.support.ConnectionSource;
 import com.j256.ormlite.table.TableUtils;
 import com.jerry.sample.frame.ormlite.bean.Article;
-import com.jerry.sample.frame.ormlite.bean.Student;
 import com.jerry.sample.frame.ormlite.bean.User;
 
 public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
@@ -31,7 +30,6 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 		try {
 			TableUtils.createTable(connectionSource, User.class);
 			TableUtils.createTable(connectionSource, Article.class);
-			TableUtils.createTable(connectionSource, Student.class);
 		} catch (SQLException e) {
 			e.printStackTrace();
 		}
@@ -42,7 +40,6 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 		try {
 			TableUtils.dropTable(connectionSource, User.class, true);
 			TableUtils.dropTable(connectionSource, Article.class, true);
-			TableUtils.dropTable(connectionSource, Student.class, true);
 			//删除完后，再创建新表
 			onCreate(database, connectionSource);
 		} catch (SQLException e) {
