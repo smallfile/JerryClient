@@ -10,8 +10,18 @@ public class Article {
 	private int id;
 	@DatabaseField
 	private String title;
+	//canBeNull -表示不能为null；foreign=true表示是一个外键;columnName 列名
 	@DatabaseField(canBeNull = true, foreign = true, columnName = "user_id", foreignAutoRefresh = true)
 	private User user;
+
+	public Article(){
+
+	}
+
+	public Article(String title, User user) {
+		this.title = title;
+		this.user = user;
+	}
 
 	public int getId() {
 		return id;

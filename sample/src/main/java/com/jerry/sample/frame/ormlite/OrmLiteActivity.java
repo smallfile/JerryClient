@@ -12,6 +12,8 @@ import com.jerry.sample.ListInfoAdapter;
 import com.jerry.sample.ListInfoBean;
 import com.jerry.sample.R;
 import com.jerry.sample.frame.litepal.Book;
+import com.jerry.sample.frame.ormlite.bean.Article;
+import com.jerry.sample.frame.ormlite.manager.ArticleManager;
 import com.jerry.sample.frame.ormlite.manager.UserManager;
 
 import org.litepal.crud.DataSupport;
@@ -67,6 +69,24 @@ public class OrmLiteActivity extends Activity {
                 } else  if("userGetAll".equals(operate)){
                     UserManager.getInstance().getUserList();
 
+                } else if("articleInsert".equals(operate)){
+                    ArticleManager.getInstance().insertArticle();
+
+                } else if("articleInsertAll".equals(operate)){
+                    ArticleManager.getInstance().insertArticleAll();
+
+                } else if("articleUpdate".equals(operate)){
+                    ArticleManager.getInstance().updateArticle();
+
+                } else  if("articleDelete".equals(operate)){
+                    ArticleManager.getInstance().deleteArticle();
+
+                } else  if("articleGet".equals(operate)){
+                    ArticleManager.getInstance().getArticle();
+
+                } else  if("articleGetAll".equals(operate)){
+                    ArticleManager.getInstance().getArticleList();
+
                 }
             }
         });
@@ -103,6 +123,36 @@ public class OrmLiteActivity extends Activity {
         userGetAll.setTitle("查找所有用户");
         userGetAll.setOperate("userGetAll");
         mListData.add(userGetAll);
+
+        ListInfoBean articleInsert = new ListInfoBean();
+        articleInsert.setTitle("文章增加");
+        articleInsert.setOperate("articleInsert");
+        mListData.add(articleInsert);
+
+        ListInfoBean articleInsertAll = new ListInfoBean();
+        articleInsertAll.setTitle("增加多个文章");
+        articleInsertAll.setOperate("articleInsertAll");
+        mListData.add(articleInsertAll);
+
+        ListInfoBean articleUpdate = new ListInfoBean();
+        articleUpdate.setTitle("文章修改");
+        articleUpdate.setOperate("articleUpdate");
+        mListData.add(articleUpdate);
+
+        ListInfoBean articleDelete = new ListInfoBean();
+        articleDelete.setTitle("文章删除");
+        articleDelete.setOperate("articleDelete");
+        mListData.add(articleDelete);
+
+        ListInfoBean articleGet = new ListInfoBean();
+        articleGet.setTitle("文章查找");
+        articleGet.setOperate("articleGet");
+        mListData.add(articleGet);
+
+        ListInfoBean articleGetAll = new ListInfoBean();
+        articleGetAll.setTitle("查找所有文章");
+        articleGetAll.setOperate("articleGetAll");
+        mListData.add(articleGetAll);
 
     }
 
