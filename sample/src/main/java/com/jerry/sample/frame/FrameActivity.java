@@ -75,6 +75,8 @@ public class FrameActivity extends Activity {
                     MyActivityManager.getInstance().startActivity(mContext, GlideActivity.class, null);
                 } else  if("fileDownload".equals(jumpActivity)){
                     MyActivityManager.getInstance().startActivity(mContext, FileDownloadMainActivity.class, null);
+                } else  if("rxAndroid".equals(jumpActivity)){
+                    MyActivityManager.getInstance().startActivity(mContext, RxAndroidActivity.class, null);
                 }
             }
         });
@@ -137,7 +139,10 @@ public class FrameActivity extends Activity {
         fileDownload.setOperate("fileDownload");
         mListData.add(fileDownload);
 
-
+        ListInfoBean rxAndroid = new ListInfoBean();
+        rxAndroid.setTitle("RxAndroid实例");
+        rxAndroid.setOperate("rxAndroid");
+        mListData.add(rxAndroid);
 
     }
 
